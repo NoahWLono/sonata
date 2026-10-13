@@ -19,18 +19,18 @@ Obtaining file://<checkout>
 Building wheels for collected packages: sonata-lang
   Building editable for sonata-lang (pyproject.toml): started
   Building editable for sonata-lang (pyproject.toml): finished with status 'done'
-  Created wheel for sonata-lang: filename=sonata_lang-1.0.0-0.editable-py3-none-any.whl size=6235 sha256=ad04eed6bded4ab712f428768422926c572efafa563025809cc16954f5901760
-  Stored in directory: /tmp/pip-ephem-wheel-cache-mq8q_7g6/wheels/e6/e1/8c/a9e8f01309a960327bd88008956806984ef2670a6a5b6bad0d
+  Created wheel for sonata-lang: filename=sonata_lang-1.0.0-0.editable-py3-none-any.whl size=6353 sha256=7d9f052fc1a9bb409c54b7c95abde94343813ba77e7ba2cd92f74d31dcc6d0da
+  Stored in directory: /tmp/pip-ephem-wheel-cache-5cj6taq0/wheels/e6/e1/8c/a9e8f01309a960327bd88008956806984ef2670a6a5b6bad0d
 Successfully built sonata-lang
 Installing collected packages: sonata-lang
   Attempting uninstall: sonata-lang
-    Found existing installation: sonata-lang 0.1.0
-    Uninstalling sonata-lang-0.1.0:
-      Successfully uninstalled sonata-lang-0.1.0
+    Found existing installation: sonata-lang 1.0.0
+    Uninstalling sonata-lang-1.0.0:
+      Successfully uninstalled sonata-lang-1.0.0
 Successfully installed sonata-lang-1.0.0
 Verified 36 packaged example resources
 .                                                                        [100%]
-1 passed in 0.46s
+1 passed in 0.50s
 {
   "sum": {
     "result": 15,
@@ -62,7 +62,7 @@ Verified 36 packaged example resources
 ........................................................................ [ 75%]
 ........................................................................ [ 90%]
 .............................................                            [100%]
-477 passed in 20.58s
+477 passed in 20.35s
 Recorded binary_search: 138 notes, 11.31s
 Recorded binary_search_miss: 156 notes, 12.69s
 Recorded bubble_sort: 478 notes, 30.95s

@@ -10,7 +10,7 @@ from sonata.runtime import execute
 
 def write(root, name, source):
     path = root / (name + '.son')
-    path.write_text(source, encoding='utf-8')
+    path.write_bytes(source.encode('utf-8'))
     return path
 
 
@@ -39,10 +39,14 @@ def test_nested_module_bundle_executes_roundtrips_and_has_honest_locations(tmp_p
 
 def test_no_import_retains_original_source_and_locations(tmp_path):
     from sonata.loader import load_program, load_source
-    source = '// heading\n\nreturn 2;'
-    path = write(tmp_path, 'main', source)
-    assert load_source(path) == source
-    assert load_program(path) == parse(source)
+    for newline in ('\n', '\r\n'):
+        source = newline.join(['// heading', '', 'return 2;'])
+        path = write(tmp_path, 'main', source)
+        assert path.read_bytes() == source.encode('utf-8')
+        assert load_source(path) == source
+        program = load_program(path)
+        assert program == parse(source)
+        assert program['body'][0]['line'] == 3
 
 
 @pytest.mark.parametrize(('main', 'helper', 'message'), [

@@ -1,7 +1,7 @@
 [
   {
     "archive": "sonata_lang-1.0.0-py3-none-any.whl",
-    "sha256": "4f86baa753d694b3ade53cd9cc39ae96d9d5cb1949cdb72e2c238e08321c3f21",
+    "sha256": "94dc816e0968b1f198365733176d4bfc26d05c884e09d247c4f5317baef3d92c",
     "passed": true,
     "version": "SONATA 1.0.0",
     "checks": [
@@ -22,7 +22,7 @@
   },
   {
     "archive": "sonata_lang-1.0.0.tar.gz",
-    "sha256": "5ac830ff773bbc3b8044299a379c57563f7032766976665b88fc58a8d5097aa1",
+    "sha256": "083c8478d6c507c22799d9231251ef029e244740213256c9c00537f78ea4bfea",
     "passed": true,
     "version": "SONATA 1.0.0",
     "checks": [

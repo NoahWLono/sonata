@@ -28,6 +28,7 @@ python -m venv .venv
 . .venv/bin/activate
 # Windows PowerShell instead: .venv\Scripts\Activate.ps1
 python -m pip install .
+sonata examples --output lessons
 sonata debug --open
 ```
 

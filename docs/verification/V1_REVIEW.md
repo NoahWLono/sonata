@@ -15,11 +15,14 @@ an exhaustive security audit.
 | Clicking a muted timeline gap could inspect an earlier audible event | Selection uses the complete event timeline, including muted events |
 | Stepping an empty runtime trace raised a browser error | Empty traces retain valid step controls without selecting a missing event |
 | Initial filtered playback could display state from a future audible event | Initialization and rewind select event zero at beat zero; muted selection clears obsolete note details |
+| Windows translated a test fixture's LF newlines before the preservation assertion | The fixture writer uses explicit UTF-8 bytes; the existing test checks both LF and CRLF source preservation and line locations |
 
 The focused re-review passed 21 tests across the music library, Python adapter,
 and browser state harness. Additional probes checked infinite iterators, repeated
 stem filename collisions, nested `finally` blocks, and explicit return overrides.
-The full build subsequently passed 477 tests.
+The full build subsequently passed 477 tests. Initial remote Windows jobs
+identified the newline assumption in the test fixture. The loader already
+preserved file contents correctly; its implementation did not change.
 
 The publication audit also checked documentation links, package contents,
 credential patterns, and generated logs. Local checkout paths were redacted
