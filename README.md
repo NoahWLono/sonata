@@ -130,6 +130,18 @@ Download the repository to open the [synchronized showcase](audio/showcase/index
 locally, or play the [demonstration video](audio/showcase/sonata-demo.mp4).
 The listening guide links to smaller clips for learning individual cues.
 
+## Song performances in the debugger
+
+The [song collection](local-songs/README.md) includes Megalovania, Bad Apple, and A Cruel Angel's Thesis as SONATA programs with companion input schedules, MIDI, and WAV recordings. In a source checkout with SONATA installed, run:
+
+```sh
+.venv/bin/python local-songs/debugger.py --port 8977
+```
+
+Open <http://127.0.0.1:8977/>, select a title under **Local songs**, and press **Play**. The source catalog and piano roll follow the recording. Select a note to inspect the MIDI event and the interpreter output that scheduled it. These song files use a performance bridge documented in the collection; they are separate from the SC1 executable-source MIDI format. The included WAV files play without a SoundFont installation.
+
+Third-party song material is outside the project's MIT license; see the [media notice](local-songs/MEDIA_NOTICE.md).
+
 ## Intended uses
 
 SONATA supports algorithm teaching, programming-language experiments, HCI

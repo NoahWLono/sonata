@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SONATA / Local songbook</title>
+<style>
+  :root { color-scheme: light; background:#e5e9ed; color:#203047; font-family:"Trebuchet MS",Verdana,sans-serif; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:clamp(20px,5vw,70px); }
+  main { max-width:940px; margin:auto; }
+  header { margin-bottom:42px; max-width:700px; }
+  h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; letter-spacing:-2px; margin:0 0 20px; }
+  p { line-height:1.6; max-width:72ch; }
+  article { background:#fff; padding:28px; border-left:5px solid #245baa; margin:0 0 18px; display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; }
+  article:nth-of-type(2) { border-color:#663f8a; }
+  article:nth-of-type(3) { border-color:#186764; }
+  h2 { font-size:24px; line-height:1.2; margin:0 0 8px; }
+  article p { color:#526276; font-size:14px; margin:0 0 14px; }
+  a { color:#245baa; text-underline-offset:3px; }
+  nav { display:flex; flex-wrap:wrap; gap:10px 20px; font-size:14px; }
+  audio { width:100%; }
+  :focus-visible { outline:3px solid #245baa; outline-offset:5px; }
+  footer { font-size:14px; padding:12px 0; }
+  details { margin-top:24px; padding:18px; border:1px solid #b2c1ca; }
+  summary { cursor:pointer; font-weight:bold; }
+  @media(max-width:650px) { article { grid-template-columns:1fr; padding:22px; gap:12px; } header { margin-bottom:28px; } }
+</style>
+<main>
+  <header>
+    <h1>SONATA<br>Local songbook</h1>
+    <p>Your three MIDI arrangements, performed through executable SONATA scores. Pick a track and press play.</p>
+  </header>
+  <article>
+    <div>
+      <h2>Megalovania</h2>
+      <p>2:36 score · 4,705 notes · 9 tracks</p>
+      <nav aria-label="Megalovania files">
+        <a href="Megalovania.son" download>SONATA source</a>
+        <a href="Megalovania.inputs.json" download>Score data</a>
+        <a href="Megalovania.mid" download>MIDI</a>
+        <a href="Megalovania.wav" download>WAV</a>
+      </nav>
+    </div>
+    <audio aria-label="Play Megalovania" controls preload="metadata" src="Megalovania.wav"></audio>
+  </article>
+  <article>
+    <div>
+      <h2>Bad Apple!!</h2>
+      <p>3:36 score · 15,271 notes · 13 tracks</p>
+      <nav aria-label="Bad Apple files">
+        <a href="BADAPPLE.son" download>SONATA source</a>
+        <a href="BADAPPLE.inputs.json" download>Score data</a>
+        <a href="BADAPPLE.mid" download>MIDI</a>
+        <a href="BADAPPLE.wav" download>WAV</a>
+      </nav>
+    </div>
+    <audio aria-label="Play Bad Apple" controls preload="metadata" src="BADAPPLE.wav"></audio>
+  </article>
+  <article>
+    <div>
+      <h2>A Cruel Angel's Thesis</h2>
+      <p>4:03 score · 1,967 notes · Piano arrangement</p>
+      <nav aria-label="A Cruel Angel's Thesis files">
+        <a href="ACruelAngelsThesis.son" download>SONATA source</a>
+        <a href="ACruelAngelsThesis.inputs.json" download>Score data</a>
+        <a href="ACruelAngelsThesis.mid" download>MIDI</a>
+        <a href="ACruelAngelsThesis.wav" download>WAV</a>
+      </nav>
+    </div>
+    <audio aria-label="Play A Cruel Angel's Thesis" controls preload="metadata" src="ACruelAngelsThesis.wav"></audio>
+  </article>
+  <details>
+    <summary>Using and editing these scores</summary>
+    <p>Keep each SONATA source beside its matching score data file. The <a href="README.md">local guide</a> includes commands to execute the scores and rebuild the recordings.</p>
+    <p>The supplied MIDI controls the notes, timing, instruments, and percussion. These recordings use FluidR3 GM sounds and include a short release tail. They reproduce your downloaded arrangements.</p>
+  </details>
+  <footer><p>Playback runs locally. See README.md and MEDIA_NOTICE.md for source provenance and licensing.</p></footer>
+</main>
+<script>
+  for (const player of document.querySelectorAll('audio')) {
+    player.addEventListener('play', () => {
+      for (const other of document.querySelectorAll('audio')) if (other !== player) other.pause();
+    });
+  }
+</script>
+</html>

@@ -1,5 +1,6 @@
 """Loopback-only debugger with bounded requests and no arbitrary file serving."""
 import json
+import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from importlib.resources import files
 from pathlib import Path
@@ -25,7 +26,7 @@ def browser_value(value):
     return value
 
 
-def create_server(source, name="program.son", port=8765, inputs_json="[]"):
+def create_server(source, name="program.son", port=8765, inputs_json="[]", performance_provider=None):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, format, *args):
             pass
@@ -55,10 +56,83 @@ def create_server(source, name="program.son", port=8765, inputs_json="[]"):
                 return False
             return True
 
+        def stream_asset(self, path, mime):
+            """Serve one registered recording, including a single seek range."""
+            with Path(path).open("rb") as stream:
+                size = stream.seek(0, 2)
+                first, last, status = 0, size - 1, 200
+                requested = self.headers.get("Range")
+                if requested is not None:
+                    match = re.fullmatch(r"bytes=(\d*)-(\d*)", requested)
+                    valid = bool(match and any(match.groups()) and size)
+                    if valid:
+                        low, high = match.groups()
+                        try:
+                            if low:
+                                first = int(low)
+                                last = min(int(high), size - 1) if high else size - 1
+                                valid = first < size and first <= last
+                            else:
+                                count = int(high)
+                                first = max(0, size - count)
+                                valid = count > 0
+                        except ValueError:
+                            valid = False
+                    if not valid:
+                        self.send_response(416)
+                        self.send_header("Content-Range", f"bytes */{size}")
+                        self.send_header("Content-Length", "0")
+                        self.send_header("Accept-Ranges", "bytes")
+                        self.end_headers()
+                        return
+                    status = 206
+                self.send_response(status)
+                self.send_header("Content-Type", mime)
+                self.send_header("Content-Length", str(max(0, last - first + 1)))
+                self.send_header("Accept-Ranges", "bytes")
+                self.send_header("X-Content-Type-Options", "nosniff")
+                self.send_header("Cache-Control", "no-store")
+                if status == 206:
+                    self.send_header("Content-Range", f"bytes {first}-{last}/{size}")
+                self.end_headers()
+                stream.seek(first)
+                remaining = last - first + 1
+                try:
+                    while remaining > 0:
+                        chunk = stream.read(min(65536, remaining))
+                        if not chunk:
+                            break
+                        self.wfile.write(chunk)
+                        remaining -= len(chunk)
+                except (BrokenPipeError, ConnectionResetError):
+                    pass  # A media element can cancel a range when seeking.
+
+        def performance_route(self):
+            if self.path == "/api/performances":
+                self.respond(200, {"performances": performance_provider.list() if performance_provider else []})
+                return
+            match = re.fullmatch(r"/api/performances/([A-Za-z0-9_-]+)(?:/(audio\.wav|performance\.mid))?", self.path)
+            if performance_provider is None or not match:
+                self.respond(404, {"error": "Unknown performance"})
+                return
+            identity, kind = match.groups()
+            try:
+                if kind is None:
+                    self.respond(200, performance_provider.payload(identity))
+                else:
+                    self.stream_asset(performance_provider.asset(identity, kind),
+                                      "audio/wav" if kind == "audio.wav" else "audio/midi")
+            except (KeyError, FileNotFoundError):
+                self.respond(404, {"error": "Unknown performance or missing recording"})
+            except ValueError as exc:
+                self.respond(409, {"error": str(exc)})
+
         def do_GET(self):
             if not self.valid_host():
                 return
-            if self.path == "/api/default":
+            if self.path == "/api/performances" or self.path.startswith("/api/performances/"):
+                self.performance_route()
+            elif self.path == "/api/default":
                 self.respond(200, {"source": source, "name": name, "inputs_json": inputs_json})
             elif self.path == "/api/examples":
                 directory = EXAMPLES if EXAMPLES.is_dir() else files("sonata").joinpath("examples")

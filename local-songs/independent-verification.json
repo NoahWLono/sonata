@@ -1,0 +1,60 @@
+{
+  "verification": "read-only independent review of generated source, fixture and MIDI",
+  "shared_dependencies": [
+    "Production parser is shared by execute and reference.evaluate.",
+    "Both MIDI inputs are parsed by Mido."
+  ],
+  "songs": [
+    {
+      "name": "Megalovania",
+      "source_sha256": "4647649472a9ffadd02fd05a52ab16a20472cb819871a084ed8821409ecc41d9",
+      "all_original_and_reconstructed_midi_message_dicts_equal": true,
+      "direct_executed_output_vs_original_delta_and_raw_bytes_equal": true,
+      "reference_result_equal": true,
+      "source_pitch_edit_changes_executed_music_catalog": true,
+      "message_count": 9483,
+      "positive_note_ons": 4705,
+      "tracks": 9,
+      "ppq": 384,
+      "duration_seconds": 156.0,
+      "fixture_pages": 41,
+      "max_fixture_array_size": 256
+    },
+    {
+      "name": "BADAPPLE",
+      "source_sha256": "7876b75eeac4e4517b524c69d42b8370179a3abc193cb3f81bb7a6bcf350a8b0",
+      "all_original_and_reconstructed_midi_message_dicts_equal": true,
+      "direct_executed_output_vs_original_delta_and_raw_bytes_equal": true,
+      "reference_result_equal": true,
+      "source_pitch_edit_changes_executed_music_catalog": true,
+      "message_count": 31028,
+      "positive_note_ons": 15271,
+      "tracks": 13,
+      "ppq": 96,
+      "duration_seconds": 215.65689698958332,
+      "fixture_pages": 129,
+      "max_fixture_array_size": 256
+    },
+    {
+      "name": "ACruelAngelsThesis",
+      "source_sha256": "ef89beec4826295d5541b0259b21dcf373bc80e2ccc684ce1cf02347b3bd354e",
+      "all_original_and_reconstructed_midi_message_dicts_equal": true,
+      "direct_executed_output_vs_original_delta_and_raw_bytes_equal": true,
+      "reference_result_equal": true,
+      "source_pitch_edit_changes_executed_music_catalog": true,
+      "message_count": 3946,
+      "positive_note_ons": 1967,
+      "tracks": 2,
+      "ppq": 1024,
+      "duration_seconds": 242.781714,
+      "fixture_pages": 17,
+      "max_fixture_array_size": 256
+    }
+  ],
+  "limitations": [
+    "Files are executable SONATA programs emitting a local performance protocol; companion .inputs.json files and score_bridge.py are required for song performance.",
+    "Ordinary sonata listen sonifies execution behavior and does not interpret the performance protocol.",
+    "MIDI semantic messages and timing are preserved exactly; raw MIDI serialization bytes can differ due to running-status formatting.",
+    "Audio timbre depends on synthesizer and sound bank; exact event preservation does not reproduce the original commercial recording."
+  ]
+}

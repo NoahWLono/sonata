@@ -1,0 +1,17 @@
+{
+  "reference_equal": true,
+  "source_sha256": "4647649472a9ffadd02fd05a52ab16a20472cb819871a084ed8821409ecc41d9",
+  "fixture_sha256": "898d1f56edd44388c833fcb16516996408c82d56b85fd918af0b1f34f5992dc6",
+  "messages": 9483,
+  "note_on_count": 4705,
+  "tracks": 9,
+  "duration_seconds": 156.0,
+  "trace_events": 1649,
+  "independence_limit": "Reference evaluator shares the parser; both MIDI paths use mido.",
+  "midi_sha256": "d28b5bd71467fddc7907da58d9edbc5093d2d7e2f63df7450e7ae18cce3cfde6",
+  "catalog_entries": 387,
+  "pages": 41,
+  "original_sha256": "db13821beebdf09713f9ee77c1d6b248ddcf78b8a31a1dece433c8876d53a904",
+  "original_event_equality": true,
+  "original_filename": "Megalovania.mid"
+}

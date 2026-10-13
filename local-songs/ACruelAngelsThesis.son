@@ -1,0 +1,116 @@
+// Local performance converted from user-supplied MIDI.
+// Run with score_bridge.py perform; keep the .inputs.json beside this file.
+// Catalog arrays are raw MIDI messages; comments name their musical meaning.
+// Each fixture word = delta_ticks * 65536 + zero-based catalog index.
+// Editing a catalog print changes every use of that message in the score.
+fn perform_track(track_id, first_page, end_page, expected_events) {
+    print([track_id, end_page - first_page, expected_events]);
+    let emitted = 0;
+    for page in first_page..end_page {
+        let events = input(page);
+        assert(len(events) > 0);
+        emitted = emitted + len(events);
+        print(events);
+    }
+    assert(emitted == expected_events);
+    return emitted;
+}
+// Protocol magic, version, PPQ, MIDI type, tracks, catalog entries.
+print([1397706324, 1, 1024, 1, 2, 90]);
+print([255, 88, 4, 4, 2, 24, 8]); // 0: "MetaMessage('time_signature', numerator=4, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0)"
+print([255, 89, 2, 253, 0]); // 1: "MetaMessage('key_signature', key='Eb', time=0)"
+print([255, 81, 3, 12, 11, 225]); // 2: "MetaMessage('set_tempo', tempo=789473, time=0)"
+print([255, 88, 4, 2, 2, 24, 8]); // 3: "MetaMessage('time_signature', numerator=2, denominator=4, clocks_per_click=24, notated_32nd_notes_per_beat=8, time=0)"
+print([255, 81, 3, 7, 68, 30]); // 4: "MetaMessage('set_tempo', tempo=476190, time=0)"
+print([255, 47, 0]); // 5: "MetaMessage('end_of_track', time=0)"
+print([255, 3, 20, 65, 99, 111, 117, 115, 116, 105, 99, 32, 71, 114, 97, 110, 100, 32, 80, 105, 97, 110, 111]); // 6: "MetaMessage('track_name', name='Acoustic Grand Piano', time=0)"
+print([192, 0]); // 7: "program_change channel=0 program=0 time=0"
+print([144, 72, 64]); // 8: "note_on channel=0 note=72 velocity=64 time=0"
+print([144, 60, 64]); // 9: "note_on channel=0 note=60 velocity=64 time=0"
+print([144, 63, 64]); // 10: "note_on channel=0 note=63 velocity=64 time=0"
+print([144, 67, 64]); // 11: "note_on channel=0 note=67 velocity=64 time=0"
+print([128, 72, 0]); // 12: "note_off channel=0 note=72 velocity=0 time=0"
+print([144, 75, 64]); // 13: "note_on channel=0 note=75 velocity=64 time=0"
+print([128, 75, 0]); // 14: "note_off channel=0 note=75 velocity=0 time=0"
+print([144, 77, 64]); // 15: "note_on channel=0 note=77 velocity=64 time=0"
+print([128, 60, 0]); // 16: "note_off channel=0 note=60 velocity=0 time=0"
+print([128, 63, 0]); // 17: "note_off channel=0 note=63 velocity=0 time=0"
+print([128, 67, 0]); // 18: "note_off channel=0 note=67 velocity=0 time=0"
+print([144, 65, 64]); // 19: "note_on channel=0 note=65 velocity=64 time=0"
+print([144, 68, 64]); // 20: "note_on channel=0 note=68 velocity=64 time=0"
+print([128, 77, 0]); // 21: "note_off channel=0 note=77 velocity=0 time=0"
+print([128, 65, 0]); // 22: "note_off channel=0 note=65 velocity=0 time=0"
+print([128, 68, 0]); // 23: "note_off channel=0 note=68 velocity=0 time=0"
+print([144, 58, 64]); // 24: "note_on channel=0 note=58 velocity=64 time=0"
+print([144, 62, 64]); // 25: "note_on channel=0 note=62 velocity=64 time=0"
+print([144, 82, 64]); // 26: "note_on channel=0 note=82 velocity=64 time=0"
+print([128, 82, 0]); // 27: "note_off channel=0 note=82 velocity=0 time=0"
+print([144, 80, 64]); // 28: "note_on channel=0 note=80 velocity=64 time=0"
+print([128, 80, 0]); // 29: "note_off channel=0 note=80 velocity=0 time=0"
+print([144, 79, 64]); // 30: "note_on channel=0 note=79 velocity=64 time=0"
+print([128, 58, 0]); // 31: "note_off channel=0 note=58 velocity=0 time=0"
+print([128, 62, 0]); // 32: "note_off channel=0 note=62 velocity=0 time=0"
+print([144, 70, 64]); // 33: "note_on channel=0 note=70 velocity=64 time=0"
+print([128, 79, 0]); // 34: "note_off channel=0 note=79 velocity=0 time=0"
+print([128, 70, 0]); // 35: "note_off channel=0 note=70 velocity=0 time=0"
+print([144, 84, 64]); // 36: "note_on channel=0 note=84 velocity=64 time=0"
+print([128, 84, 0]); // 37: "note_off channel=0 note=84 velocity=0 time=0"
+print([144, 74, 64]); // 38: "note_on channel=0 note=74 velocity=64 time=0"
+print([128, 74, 0]); // 39: "note_off channel=0 note=74 velocity=0 time=0"
+print([144, 48, 64]); // 40: "note_on channel=0 note=48 velocity=64 time=0"
+print([128, 48, 0]); // 41: "note_off channel=0 note=48 velocity=0 time=0"
+print([144, 51, 64]); // 42: "note_on channel=0 note=51 velocity=64 time=0"
+print([144, 56, 64]); // 43: "note_on channel=0 note=56 velocity=64 time=0"
+print([128, 51, 0]); // 44: "note_off channel=0 note=51 velocity=0 time=0"
+print([144, 53, 64]); // 45: "note_on channel=0 note=53 velocity=64 time=0"
+print([128, 53, 0]); // 46: "note_off channel=0 note=53 velocity=0 time=0"
+print([128, 56, 0]); // 47: "note_off channel=0 note=56 velocity=0 time=0"
+print([144, 46, 64]); // 48: "note_on channel=0 note=46 velocity=64 time=0"
+print([128, 46, 0]); // 49: "note_off channel=0 note=46 velocity=0 time=0"
+print([144, 50, 64]); // 50: "note_on channel=0 note=50 velocity=64 time=0"
+print([128, 50, 0]); // 51: "note_off channel=0 note=50 velocity=0 time=0"
+print([144, 47, 64]); // 52: "note_on channel=0 note=47 velocity=64 time=0"
+print([128, 47, 0]); // 53: "note_off channel=0 note=47 velocity=0 time=0"
+print([144, 55, 64]); // 54: "note_on channel=0 note=55 velocity=64 time=0"
+print([128, 55, 0]); // 55: "note_off channel=0 note=55 velocity=0 time=0"
+print([144, 44, 64]); // 56: "note_on channel=0 note=44 velocity=64 time=0"
+print([128, 44, 0]); // 57: "note_off channel=0 note=44 velocity=0 time=0"
+print([144, 76, 64]); // 58: "note_on channel=0 note=76 velocity=64 time=0"
+print([128, 76, 0]); // 59: "note_off channel=0 note=76 velocity=0 time=0"
+print([144, 69, 64]); // 60: "note_on channel=0 note=69 velocity=64 time=0"
+print([144, 43, 64]); // 61: "note_on channel=0 note=43 velocity=64 time=0"
+print([128, 69, 0]); // 62: "note_off channel=0 note=69 velocity=0 time=0"
+print([144, 71, 64]); // 63: "note_on channel=0 note=71 velocity=64 time=0"
+print([128, 43, 0]); // 64: "note_off channel=0 note=43 velocity=0 time=0"
+print([128, 71, 0]); // 65: "note_off channel=0 note=71 velocity=0 time=0"
+print([144, 41, 64]); // 66: "note_on channel=0 note=41 velocity=64 time=0"
+print([128, 41, 0]); // 67: "note_off channel=0 note=41 velocity=0 time=0"
+print([144, 73, 64]); // 68: "note_on channel=0 note=73 velocity=64 time=0"
+print([128, 73, 0]); // 69: "note_off channel=0 note=73 velocity=0 time=0"
+print([144, 52, 64]); // 70: "note_on channel=0 note=52 velocity=64 time=0"
+print([128, 52, 0]); // 71: "note_off channel=0 note=52 velocity=0 time=0"
+print([144, 45, 64]); // 72: "note_on channel=0 note=45 velocity=64 time=0"
+print([128, 45, 0]); // 73: "note_off channel=0 note=45 velocity=0 time=0"
+print([144, 81, 64]); // 74: "note_on channel=0 note=81 velocity=64 time=0"
+print([128, 81, 0]); // 75: "note_off channel=0 note=81 velocity=0 time=0"
+print([144, 83, 64]); // 76: "note_on channel=0 note=83 velocity=64 time=0"
+print([128, 83, 0]); // 77: "note_off channel=0 note=83 velocity=0 time=0"
+print([144, 36, 64]); // 78: "note_on channel=0 note=36 velocity=64 time=0"
+print([128, 36, 0]); // 79: "note_off channel=0 note=36 velocity=0 time=0"
+print([144, 39, 64]); // 80: "note_on channel=0 note=39 velocity=64 time=0"
+print([128, 39, 0]); // 81: "note_off channel=0 note=39 velocity=0 time=0"
+print([144, 42, 64]); // 82: "note_on channel=0 note=42 velocity=64 time=0"
+print([128, 42, 0]); // 83: "note_off channel=0 note=42 velocity=0 time=0"
+print([144, 37, 64]); // 84: "note_on channel=0 note=37 velocity=64 time=0"
+print([144, 32, 64]); // 85: "note_on channel=0 note=32 velocity=64 time=0"
+print([128, 37, 0]); // 86: "note_off channel=0 note=37 velocity=0 time=0"
+print([128, 32, 0]); // 87: "note_off channel=0 note=32 velocity=0 time=0"
+print([144, 34, 64]); // 88: "note_on channel=0 note=34 velocity=64 time=0"
+print([128, 34, 0]); // 89: "note_off channel=0 note=34 velocity=0 time=0"
+
+// Emit tracks in their original order, preserving simultaneous-event order.
+let total_events = 0;
+total_events = total_events + perform_track(0, 0, 1, 9);
+total_events = total_events + perform_track(1, 1, 17, 3937);
+assert(total_events == 3946);
+return total_events;

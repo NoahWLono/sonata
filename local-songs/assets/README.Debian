@@ -1,0 +1,8 @@
+fluid-soundfont for Debian
+--------------------------
+
+This package installs example timidity configurations with the package
+documentation. Please see fluidr3_gm.cfg (for the GM set) and fluidr3_gs.cfg
+(for the GS set) respectively.
+
+ -- Toby Smithe <tsmithe@ubuntu.com>  Thu, 21 Feb 2008 15:49:12 +0000

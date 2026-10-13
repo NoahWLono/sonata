@@ -1,0 +1,17 @@
+{
+  "reference_equal": true,
+  "source_sha256": "ef89beec4826295d5541b0259b21dcf373bc80e2ccc684ce1cf02347b3bd354e",
+  "fixture_sha256": "a6b0e888c0b79d5b877b2485ded429861830112a09c7d2f519fc67cc304ff5bb",
+  "messages": 3946,
+  "note_on_count": 1967,
+  "tracks": 2,
+  "duration_seconds": 242.781714,
+  "trace_events": 510,
+  "independence_limit": "Reference evaluator shares the parser; both MIDI paths use mido.",
+  "midi_sha256": "1b7071cb43ea45bec07ad0d57a66c2014aa8b7ecd878bdbe8c8fbcd11ec8b3ab",
+  "catalog_entries": 90,
+  "pages": 17,
+  "original_sha256": "145148cc61979e134f070f0c2bcfb2dc37fd9c34711dfc0fdeea4c797033834e",
+  "original_event_equality": true,
+  "original_filename": "Evangelion - Cruel Angel's Thesis.mid"
+}

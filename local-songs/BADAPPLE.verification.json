@@ -1,0 +1,17 @@
+{
+  "reference_equal": true,
+  "source_sha256": "7876b75eeac4e4517b524c69d42b8370179a3abc193cb3f81bb7a6bcf350a8b0",
+  "fixture_sha256": "8c8ee12addc128dfbba30b361edd2fe965980655988b8f69973c37d2936142bf",
+  "messages": 31028,
+  "note_on_count": 15271,
+  "tracks": 13,
+  "duration_seconds": 215.65689698958332,
+  "trace_events": 3441,
+  "independence_limit": "Reference evaluator shares the parser; both MIDI paths use mido.",
+  "midi_sha256": "8ff379af6d6ada2d38606f3a468a38b684ac67197a8581f321e381db416b278a",
+  "catalog_entries": 533,
+  "pages": 129,
+  "original_sha256": "faec8a53f8ef66b3e63623bff41fac8e134ed7a2ab2fec3581fa1295fa30343e",
+  "original_event_equality": true,
+  "original_filename": "badapple!!midifull.mid"
+}

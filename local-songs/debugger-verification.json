@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-13",
+  "base_commit": "a53d80206e227e111fe4aa3d10a10807d2c2f10e",
+  "core_tests_passed": 490,
+  "local_tests_passed": 14,
+  "songs": {
+    "Megalovania": {"scheduled_events": 9483, "notes": 4705, "browser_playback_observed": true},
+    "BADAPPLE": {"scheduled_events": 31028, "notes": 15271, "browser_playback_observed": true},
+    "ACruelAngelsThesis": {"scheduled_events": 3946, "notes": 1967, "browser_playback_observed": true}
+  },
+  "independent_review": {
+    "every_note_onset_channel_pitch_velocity_matches_merged_midi": true,
+    "source_catalog_references_verified": true,
+    "source_fixture_midi_wav_hash_binding_verified": true,
+    "shared_dependencies": ["mido MIDI parsing", "SONATA syntax parser"]
+  },
+  "browser_layout": {
+    "original_css_width_656_editor_height": 9289,
+    "fixed_css_width_656_editor_height": 280,
+    "fixed_css_width_656_piano_roll_height": 250,
+    "fixed_css_width_656_code_and_roll_side_by_side": true,
+    "fixed_css_width_529_editor_height": 154,
+    "fixed_css_width_1032_editor_height": 565
+  },
+  "playback_regressions_covered": [
+    "media clock drives source selection and cursor",
+    "note-off seek uses the original scheduled time",
+    "rewind, playback speed and breakpoint position",
+    "stale song fetch and stale audio play promises",
+    "loop boundary and native ended event",
+    "return to editable normal program mode"
+  ],
+  "scope": "Scheduled MIDI replay of verified SONATA output; interpreter execution completes before audio playback. Piano-roll durations represent key-down intervals. No claim of human listening-study validation."
+}

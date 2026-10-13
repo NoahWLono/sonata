@@ -1,0 +1,11 @@
+{
+  "name": "FluidR3 General MIDI",
+  "author": "Frank Wen",
+  "license": "MIT",
+  "package": "fluid-soundfont-gm_3.1-6_all.deb",
+  "source": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-6_all.deb",
+  "checksum_source": "https://packages.debian.org/sid/all/fluid-soundfont-gm/download",
+  "package_sha256": "9965fbcc6acee17d6f72b685d28c7f968ec64eba14645445b476d5c6cc2eee4c",
+  "soundfont_sha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
+  "license_file": "FluidR3-LICENSE.txt"
+}

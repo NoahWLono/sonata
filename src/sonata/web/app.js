@@ -5,6 +5,7 @@ const colors = ["#dac18a", "#88bad5", "#ce899b", "#9dc7b0", "#ae9bcc", "#da9b72"
 const state = {
   source: "", name: "program.son", run: null, view: "runtime", notes: [],
   events: [], eventTimeline: [], eventNotes: new Map(), lineEvents: new Map(),
+  eventIndex: new Map(), eventTimes: new Map(), noteIndices: new Map(), media: null, performances: [],
   selectedEvent: -1, selectedNote: -1, selectedLine: 1, cursor: 0, total: 0,
   lowPitch: 43, highPitch: 84, longest: 0, breakpoints: new Set(),
   playing: false, speed: 1, zoom: 100, request: 0, busy: false,
@@ -62,23 +63,33 @@ function lowerBound(items, value, key = "start") {
 }
 
 function updateControls() {
+  const performance = Boolean(state.run?.performance);
+  if (performance) $("workspace").classList.add("performance-mode");
+  else $("workspace").classList.remove("performance-mode");
   const accepted = Boolean(state.run && !state.busy && !state.scoreDirty);
   const playable = accepted && Boolean(state.notes.length);
-  $("compare").disabled = state.busy;
-  $("apply-settings").disabled = state.busy;
+  $("compare").disabled = state.busy || performance;
+  $("apply-settings").disabled = state.busy || performance;
   $("score-apply").disabled = state.busy || !state.scoreDirty;
   $("score-reset").disabled = state.busy || !state.scoreDirty;
-  for (const id of ["token-replace", "token-insert-before", "token-insert-after", "token-delete"]) $(id).disabled = state.busy || !state.run || state.side === "right";
+  for (const id of ["token-replace", "token-insert-before", "token-insert-after", "token-delete"]) $(id).disabled = state.busy || !state.run || state.side === "right" || performance;
   $("audition-a").disabled = $("audition-b").disabled = state.busy || !state.comparison;
   $("event-seek").disabled = !accepted || state.view !== "runtime" || !state.events.length;
   $("event-seek").max = Math.max(0, state.events.length - 1);
 
-  $("run").disabled = state.busy;
-  $("palette").disabled = state.busy;
-  $("run").textContent = state.busy ? "Running…" : "▶  Run source";
+  $("run").disabled = state.busy || performance;
+  $("palette").disabled = state.busy || performance;
+  $("code-view").disabled = performance;
+  $("run").textContent = state.busy ? "Loading…" : performance ? "✓  Local performance" : "▶  Run source";
+  for (const id of ["fixtures", "mapping", "filter-kinds", "filter-functions", "filter-variables", "range-name", "range-min", "range-max", "source-b", "fixtures-b", "copy-to-b"]) $(id).disabled = state.busy || performance;
+  $("listening-options").hidden = performance;
+  $("comparison-panel").hidden = performance;
+  $("performance-notice").hidden = !performance;
   for (const id of ["play", "replay"]) $(id).disabled = !playable;
   $("step").disabled = !accepted || !(state.view === "runtime" ? state.events.length : state.notes.length);
-  for (const id of ["export-wav", "export-midi", "export-code"]) $(id).disabled = !accepted;
+  for (const id of ["export-wav", "export-midi", "export-code"]) $(id).disabled = !accepted || (performance && id === "export-code");
+  $("export-midi").textContent = performance ? "Song MIDI" : "Runtime MIDI";
+  $("runtime-view").textContent = performance ? "Song performance" : "Execution";
   $("play-label").textContent = state.playing ? "Pause" : "Play";
   $("play-icon").textContent = state.playing ? "Ⅱ" : "▷";
   $("play").setAttribute("aria-label", state.playing ? "Pause playback" : "Play score");
@@ -120,7 +131,7 @@ function highlightLine(line, reveal = false) {
     $("line-numbers").scrollTop = $("source").scrollTop;
   }
   const linked = state.view === "code" ? state.notes.filter((note) => note.line === line).length : (state.lineEvents.get(line) || []).length;
-  $("source-link").textContent = state.run ? `Line ${line} · ${linked} ${state.view === "code" ? "code notes" : "execution events"}` : "Run to link source to sound.";
+  $("source-link").textContent = state.run ? `Line ${line} · ${linked} ${state.view === "code" ? "code notes" : state.run?.performance ? "scheduled MIDI events" : "execution events"}` : "Run to link source to sound.";
   $("previous-line-event").disabled = linked < 2;
   $("next-line-event").disabled = linked < 2;
 }
@@ -142,7 +153,9 @@ function stopSound() {
 
 function pause(quiet = false) {
   state.transport++;
-  if (state.playing && state.audio) state.cursor = Math.min(state.total, state.anchorBeat + (state.audio.currentTime - state.anchorAudio) * 2 * state.speed);
+  if (state.playing && state.media) state.cursor = Math.min(state.total, state.media.currentTime * 2);
+  if (state.media) state.media.pause();
+  if (state.playing && !state.media && state.audio) state.cursor = Math.min(state.total, state.anchorBeat + (state.audio.currentTime - state.anchorAudio) * 2 * state.speed);
   state.playing = false;
   cancelAnimationFrame(state.animation);
   stopSound();
@@ -151,8 +164,17 @@ function pause(quiet = false) {
   if (!quiet && state.run) status(`Paused at ${timeLabel(state.cursor)}.`);
 }
 
+function syncMediaPosition() {
+  if (state.media) state.media.currentTime = Math.max(0, Math.min(state.total, state.cursor)) / 2;
+}
+
 function clearRun() {
   pause(true);
+  if (state.media) {
+    state.media.removeAttribute("src");
+    state.media.load();
+    state.media = null;
+  }
   state.request++;
   state.busy = false;
   state.run = null;
@@ -168,6 +190,9 @@ function clearRun() {
   state.notes = [];
   state.events = [];
   state.eventTimeline = [];
+  state.eventIndex.clear();
+  state.eventTimes.clear();
+  state.noteIndices.clear();
   state.eventNotes.clear();
   state.lineEvents.clear();
   state.cursor = 0;
@@ -222,10 +247,13 @@ function requestSettings() {
 function activateRun(payload) {
   state.run = payload;
   state.events = payload.result.trace;
+  state.eventIndex.clear();
+  state.eventTimes.clear();
   state.lineEvents.clear();
   state.eventNotes.clear();
   for (let index = 0; index < state.events.length; index++) {
     const event = state.events[index];
+    state.eventIndex.set(event.id, index);
     if (!state.lineEvents.has(event.line)) state.lineEvents.set(event.line, []);
     state.lineEvents.get(event.line).push(index);
   }
@@ -236,11 +264,12 @@ function activateRun(payload) {
     earliest.set(note.event_id, Math.min(earliest.get(note.event_id) ?? Infinity, note.start));
   }
   const stride = state.settings?.profile?.event_stride ?? 0.25;
-  state.eventTimeline = state.events.map((event, index) => ({start: earliest.get(event.id) ?? index * stride, index})).sort((a, b) => a.start - b.start);
+  state.eventTimeline = state.events.map((event, index) => ({start: payload.performance ? event.start : earliest.get(event.id) ?? index * stride, index})).sort((a, b) => a.start - b.start);
+  for (const point of state.eventTimeline) state.eventTimes.set(point.index, point.start);
   $("program-output").textContent = payload.result.output.length ? payload.result.output.map((value) => typeof value === "string" ? value : format(value)).join("\n") : "No printed output.";
   $("return-value").textContent = format(payload.result.return_value);
   $("return-value").title = format(payload.result.return_value);
-  $("run-stats").textContent = `${state.comparison ? (state.side === "left" ? "A · " : "B · ") : ""}${state.events.length.toLocaleString()} events · ${payload.result.instructions.toLocaleString()} instructions`;
+  $("run-stats").textContent = `${state.comparison ? (state.side === "left" ? "A · " : "B · ") : ""}${state.events.length.toLocaleString()} ${payload.performance ? "scheduled MIDI events" : "events"} · ${payload.result.instructions.toLocaleString()} instructions`;
   const error = payload.result.error;
   showError(error ? `${error.kind} at line ${error.line}: ${error.message}` : "");
   state.scoreTokens = (payload.code_tokens || []).map((token) => typeof token === "string" ? token : token.text);
@@ -250,7 +279,61 @@ function activateRun(payload) {
   configureView();
 }
 
+async function loadPerformance(id) {
+  clearRun();
+  const request = ++state.request;
+  state.busy = true;
+  updateControls();
+  status("Loading the local performance and its source links…", "busy");
+  try {
+    const payload = await responseJSON(await fetch(`/api/performances/${encodeURIComponent(id)}`));
+    if (request !== state.request) return;
+    state.busy = false;
+    state.view = "runtime";
+    state.source = payload.source;
+    state.name = payload.name;
+    state.breakpoints.clear();
+    state.loop.enabled = false;
+    $("loop-enabled").checked = false;
+    $("examples").value = "";
+    $("performances").value = id;
+    activateRun(payload);
+    $("loop-start").value = "0";
+    $("loop-end").value = String(state.total);
+    state.media = new Audio(payload.performance.audio_url);
+    state.media.preload = "auto";
+    const media = state.media;
+    media.addEventListener("error", () => {
+      if (state.media !== media) return;
+      pause(true);
+      showError("The local WAV could not load. Rebuild the song audio and reload this performance.");
+    });
+    media.addEventListener("ended", () => {
+      if (state.media !== media) return;
+      pause(true);
+      if (state.loop.enabled) {
+        state.cursor = state.loop.start;
+        syncMediaPosition();
+        play();
+        return;
+      }
+      state.cursor = state.total;
+      updateControls();
+      drawTimeline();
+      status("Performance complete. Press Play to hear it again.");
+    });
+    status(`${payload.performance.title} is ready. Play follows the rendered audio; select notes to inspect their source.`);
+  } catch (error) {
+    if (request !== state.request) return;
+    state.busy = false;
+    showError(error.message);
+    status("This local performance could not load.");
+    updateControls();
+  }
+}
+
 async function runSource(compare = false) {
+  if (state.run?.performance) return;
   // Click events are not comparison requests.
   compare = compare === true;
   let settings;
@@ -406,6 +489,7 @@ function chooseToken(index) {
 }
 
 function editToken(action) {
+  if (state.run?.performance) return;
   if (state.side === "right" || state.busy) return;
   const text = $("token-text").value.trim();
   if (action !== "delete" && (!text || /\s/.test(text))) { showError("Enter a single token, such as let, total, 5, <=, or ;."); return; }
@@ -461,18 +545,22 @@ async function applyScore() {
 
 function configureView() {
   pause(true);
+  const performance = state.run?.performance;
+  if (performance) state.view = "runtime";
   const code = state.view === "code";
   $("runtime-view").setAttribute("aria-pressed", String(!code));
   $("code-view").setAttribute("aria-pressed", String(code));
-  $("source").readOnly = code || state.side === "right";
+  $("source").readOnly = code || state.side === "right" || Boolean(performance);
   $("source").value = code ? (state.run?.code_source || "Run the source to view its canonical code.") : state.side === "right" ? state.run?.source || "" : state.source;
   $("filename").textContent = code ? "Canonical source for executable score" : state.side === "right" ? "Program B · comparison" : state.name;
-  $("source-state").textContent = code ? (state.side === "right" ? "Score B · edit Program B in the comparison panel" : "Edit its musical cells below") : state.side === "right" ? "Program B · change it in Compare two executions" : "Editable program A";
-  $("score-caption").textContent = code ? "The program encoded as playable notes" : "The sound of this execution";
-  $("view-explanation").textContent = code ? "Executable MIDI contains the program itself. This view uses canonical source." : "Each sound links to a step in your program.";
-  $("state-title").textContent = code ? "Inside the score" : "At this moment";
-  $("state-title").nextElementSibling.textContent = code ? "Static token and note information" : "State after the selected event";
+  $("source-state").textContent = performance ? "Performance source · read only" : code ? (state.side === "right" ? "Score B · edit Program B in the comparison panel" : "Edit its musical cells below") : state.side === "right" ? "Program B · change it in Compare two executions" : "Editable program A";
+  $("score-caption").textContent = performance ? "The supplied arrangement, performed by SONATA" : code ? "The program encoded as playable notes" : "The sound of this execution";
+  $("view-explanation").textContent = performance ? "Scheduled MIDI events link to the source catalog and emitted fixture page." : code ? "Executable MIDI contains the program itself. This view uses canonical source." : "Each sound links to a step in your program.";
+  $("state-title").textContent = performance ? "Performance event" : code ? "Inside the score" : "At this moment";
+  $("state-title").nextElementSibling.textContent = performance ? "Source provenance for the scheduled MIDI message" : code ? "Static token and note information" : "State after the selected event";
   state.notes = [...(code ? state.run?.code_notes || [] : state.run?.notes || [])].sort((a, b) => a.start - b.start || a.id - b.id);
+  state.noteIndices.clear();
+  for (let index = 0; index < state.notes.length; index++) if (!state.noteIndices.has(state.notes[index].event_id)) state.noteIndices.set(state.notes[index].event_id, index);
   state.cursor = 0;
   state.selectedEvent = -1;
   state.selectedNote = -1;
@@ -486,7 +574,7 @@ function configureView() {
     low = Math.min(low, note.pitch);
     high = Math.max(high, note.pitch);
   }
-  if (state.view === "runtime" && state.events.length) state.total = Math.max(state.total, state.events.length * (state.settings?.profile?.event_stride ?? 0.25));
+  if (!performance && state.view === "runtime" && state.events.length) state.total = Math.max(state.total, state.events.length * (state.settings?.profile?.event_stride ?? 0.25));
   if (state.comparison && state.view === "runtime") {
     for (const side of ["left", "right"]) {
       const run = state.comparison[side];
@@ -494,7 +582,9 @@ function configureView() {
       for (const note of run.notes) state.total = Math.max(state.total, note.start + note.duration);
     }
   }
-  if (state.notes.length) state.total += 0.4;
+  if (performance) state.total = performance.duration_seconds * 2;
+  else if (state.notes.length) state.total += 0.4;
+  $("timeline-clock-label").textContent = performance ? "Real time · 1 grid beat = 0.5 seconds" : "120 BPM / time in beats";
   state.lowPitch = state.notes.length ? Math.max(0, Math.min(low - 3, high - 19)) : 43;
   state.highPitch = state.notes.length ? Math.min(127, Math.max(high + 3, low + 19)) : 84;
   $("note-count").textContent = `${state.notes.length.toLocaleString()} notes`;
@@ -512,7 +602,7 @@ function configureView() {
     const item = document.createElement("span"), swatch = document.createElement("i");
     swatch.className = "voice-swatch";
     swatch.style.background = colors[(Number(voice) || 0) % colors.length];
-    item.append(swatch, document.createTextNode(code ? `Channel ${Number(voice) + 1}` : voice === 0 ? "Main voice" : `Depth voice ${voice}`));
+    item.append(swatch, document.createTextNode((code || performance) ? (Number(voice) === 9 ? "Drums · channel 10" : `Channel ${Number(voice) + 1}`) : voice === 0 ? "Main voice" : `Depth voice ${voice}`));
     legend.append(item);
   }
   $("voice-legend").replaceChildren(legend);
@@ -521,7 +611,7 @@ function configureView() {
   sizeTimeline();
   if (state.view === "runtime" && state.events.length) {
     selectEvent(0, false);
-    state.selectedNote = state.notes.findIndex((note) => note.event_id === state.events[0].id);
+    state.selectedNote = (state.noteIndices.get(state.events[0].id) ?? -1);
   } else if (state.notes.length) selectNote(0, false);
   updateControls();
 }
@@ -532,7 +622,7 @@ function inspectSound(note) {
   const details = document.createElement("div");
   details.textContent = `MIDI ${note.pitch} · velocity ${note.velocity} · channel ${note.channel + 1}`;
   const timing = document.createElement("div");
-  timing.textContent = `Beat ${note.start.toFixed(3)} · ${note.duration.toFixed(3)} beats long`;
+  timing.textContent = state.run?.performance ? `${timeLabel(note.start)} · ${(note.duration / 2).toFixed(3)} seconds long` : `Beat ${note.start.toFixed(3)} · ${note.duration.toFixed(3)} beats long`;
   $("selected-note").replaceChildren(heading, details, timing);
 }
 
@@ -541,11 +631,11 @@ function selectEvent(index, reveal = true) {
   if (!event) return;
   state.selectedEvent = index;
   $("event-seek").value = String(index);
-  $("event-accessible").textContent = `Event ${index + 1} of ${state.events.length}: ${event.kind}, ${event.function || "main"}, line ${event.line}. ${state.eventNotes.has(event.id) ? "Audible" : "Muted by listening filters"}.`;
+  $("event-accessible").textContent = `Event ${index + 1} of ${state.events.length}: ${event.kind}, ${event.function || "main"}, line ${event.line}. ${state.eventNotes.has(event.id) ? "Note onset" : state.run?.performance ? "MIDI control, metadata, or note release" : "Muted by listening filters"}.`;
   $("event-position").textContent = `Event ${index + 1} of ${state.events.length} · line ${event.line}`;
   $("event-kind").textContent = event.kind;
   $("event-id").textContent = `#${event.id}`;
-  $("event-description").textContent = `${event.kind} in ${event.function || "main"} · line ${event.line}, column ${event.col}`;
+  $("event-description").textContent = state.run?.performance ? `${event.kind} at ${timeLabel(event.start)} · catalog line ${event.line} · emission line ${event.data?.emission_line ?? "—"}` : `${event.kind} in ${event.function || "main"} · line ${event.line}, column ${event.col}`;
   $("event-data").textContent = format(event.data || {});
   $("variables").textContent = format(event.variables || {});
   $("variable-count").textContent = String(Object.keys(event.variables || {}).length);
@@ -568,7 +658,7 @@ function selectEvent(index, reveal = true) {
   highlightLine(event.line, reveal);
   const note = (state.eventNotes.get(event.id) || [])[0];
   if (note) inspectSound(note);
-  else $("selected-note").textContent = "This event is muted by the listening filters.";
+  else $("selected-note").textContent = state.run?.performance ? "This MIDI event changes performance state or releases a note." : "This event is muted by the listening filters.";
 }
 
 function selectNote(index, seek = true) {
@@ -578,9 +668,10 @@ function selectNote(index, seek = true) {
   if (seek) {
     pause(true);
     state.cursor = note.start;
+    syncMediaPosition();
   }
   if (state.view === "runtime") {
-    const eventIndex = state.events.findIndex((event) => event.id === note.event_id);
+    const eventIndex = state.eventIndex.get(note.event_id) ?? -1;
     selectEvent(eventIndex);
   } else {
     $("event-position").textContent = `Code note ${index + 1} of ${state.notes.length}`;
@@ -606,8 +697,9 @@ function inspectSourceLine(line) {
     if (index !== undefined) {
       selectEvent(index, false);
       const event = state.events[index];
-      state.cursor = (state.eventNotes.get(event.id) || [])[0]?.start ?? state.eventTimeline.find((point) => point.index === index)?.start ?? 0;
-      state.selectedNote = state.notes.findIndex((note) => note.event_id === event.id);
+      state.cursor = (state.eventNotes.get(event.id) || [])[0]?.start ?? state.eventTimes.get(index) ?? 0;
+      state.selectedNote = state.noteIndices.get(event.id) ?? -1;
+      syncMediaPosition();
       revealCursor();
     }
   }
@@ -675,9 +767,10 @@ function seekEvent(index) {
   const event = state.events[index];
   if (!event) return;
   const notes = state.eventNotes.get(event.id) || [];
-  state.cursor = notes[0]?.start ?? state.eventTimeline.find((point) => point.index === index)?.start ?? 0;
-  state.selectedNote = state.notes.findIndex((note) => note.event_id === event.id);
+  state.cursor = notes[0]?.start ?? state.eventTimes.get(index) ?? 0;
+  state.selectedNote = state.noteIndices.get(event.id) ?? -1;
   selectEvent(index);
+  syncMediaPosition();
   revealCursor();
   updateControls();
   drawTimeline();
@@ -696,6 +789,7 @@ async function step(direction = 1) {
     seekEvent(index);
     notes = state.eventNotes.get(state.events[index].id) || [];
   }
+  if (state.media) { status(`Stepped to scheduled MIDI event ${state.selectedEvent + 1}. Press Play to hear from here.`); return; }
   const request = state.request;
   const transport = state.transport;
   try {
@@ -726,12 +820,29 @@ async function play() {
   const request = state.request;
   const transport = ++state.transport;
   try {
-    await ensureAudio();
+    if (!state.media) await ensureAudio();
     if (request !== state.request || transport !== state.transport) return;
     stopSound();
     readLoop();
     if (state.loop.enabled && (state.cursor < state.loop.start || state.cursor >= state.loop.end)) state.cursor = state.loop.start;
     else if (state.cursor >= state.total - 0.01) state.cursor = 0;
+    if (state.media) {
+      const media = state.media;
+      syncMediaPosition();
+      media.playbackRate = state.speed;
+      media.preservesPitch = true;
+      await media.play();
+      if (request !== state.request || transport !== state.transport) {
+        if (state.media !== media) media.pause();
+        return;
+      }
+      state.playing = true;
+      findNextBreakpoint();
+      updateControls();
+      status("Playing the local arrangement. The source and notes follow its audio clock.", "playing");
+      animate();
+      return;
+    }
     state.anchorBeat = state.cursor;
     state.anchorAudio = state.audio.currentTime + 0.02;
     state.nextNote = lowerBound(state.notes, state.cursor - 0.000001);
@@ -748,6 +859,7 @@ async function play() {
     status(state.view === "code" ? "Playing the executable score." : "Playing execution. Source and state follow the sound.", "playing");
     animate();
   } catch (error) {
+    if (request !== state.request || transport !== state.transport) return;
     pause(true);
     showError(error.message);
   }
@@ -756,11 +868,12 @@ async function play() {
 function animate() {
   if (!state.playing) return;
   try {
-    state.cursor = Math.max(state.anchorBeat, state.anchorBeat + (state.audio.currentTime - state.anchorAudio) * 2 * state.speed);
+    state.cursor = state.media ? state.media.currentTime * 2 : Math.max(state.anchorBeat, state.anchorBeat + (state.audio.currentTime - state.anchorAudio) * 2 * state.speed);
     if (state.nextBreak && state.cursor >= state.nextBreak.start) {
       const breakpoint = state.nextBreak;
       pause(true);
       state.cursor = breakpoint.start;
+      syncMediaPosition();
       selectEvent(breakpoint.index);
       state.selectedNote = lowerBound(state.notes, state.cursor);
       revealCursor();
@@ -772,6 +885,7 @@ function animate() {
     if (state.loop.enabled && state.cursor >= state.loop.end) {
       pause(true);
       state.cursor = state.loop.start;
+      syncMediaPosition();
       play();
       return;
     }
@@ -784,7 +898,7 @@ function animate() {
       return;
     }
     const horizon = Math.min(state.cursor + 0.22 * state.speed, state.nextBreak?.start ?? Infinity, state.loop.enabled ? state.loop.end : Infinity);
-    while (state.nextNote < state.notes.length && state.notes[state.nextNote].start < horizon) {
+    while (!state.media && state.nextNote < state.notes.length && state.notes[state.nextNote].start < horizon) {
       const note = state.notes[state.nextNote++];
       const when = Math.max(state.audio.currentTime, state.anchorAudio + (note.start - state.anchorBeat) / (2 * state.speed));
       soundNote(note, when, note.duration / (2 * state.speed));
@@ -874,7 +988,7 @@ function drawTimeline() {
     const y = top + (state.highPitch - note.pitch) * row + 1;
     const noteWidth = Math.max(2, note.duration * state.zoom - 1);
     if (x + noteWidth < left) continue;
-    const selected = state.view === "runtime" ? state.events[state.selectedEvent]?.id === note.event_id : index === state.selectedNote;
+    const selected = state.run?.performance && state.playing ? note.start <= state.cursor && note.start + note.duration > state.cursor : state.view === "runtime" ? state.events[state.selectedEvent]?.id === note.event_id : index === state.selectedNote;
     context.fillStyle = colorFor(note);
     context.globalAlpha = selected ? 1 : 0.72;
     context.fillRect(x, y, noteWidth, Math.max(2, row - 2));
@@ -907,6 +1021,17 @@ function drawTimeline() {
 
 async function download(kind, button) {
   if (!state.run) return;
+  if (state.run.performance) {
+    if (kind === "code-midi") return;
+    const link = document.createElement("a");
+    link.href = kind === "wav" ? state.run.performance.audio_url : state.run.performance.midi_url;
+    link.download = `${state.run.performance.id}.${kind === "wav" ? "wav" : "mid"}`;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    status("Downloading the local performance.");
+    return;
+  }
   const request = state.request;
   const source = state.run.source;
   const settings = {...state.settings, inputs_json: state.side === "right" ? $("fixtures-b").value : state.settings.inputs_json};
@@ -941,9 +1066,10 @@ $("step").addEventListener("click", () => step());
 $("replay").addEventListener("click", () => {
   pause(true);
   state.cursor = 0;
+  syncMediaPosition();
   if (state.view === "runtime" && state.events.length) {
     selectEvent(0);
-    state.selectedNote = state.notes.findIndex((note) => note.event_id === state.events[0].id);
+    state.selectedNote = (state.noteIndices.get(state.events[0].id) ?? -1);
   } else if (state.notes.length) selectNote(0, false);
   revealCursor();
   updateControls();
@@ -951,7 +1077,7 @@ $("replay").addEventListener("click", () => {
   status("Rewound to the beginning. Press Play to listen.");
 });
 $("source").addEventListener("input", () => {
-  if (state.view === "code" || state.side === "right") return;
+  if (state.view === "code" || state.side === "right" || state.run?.performance) return;
   state.source = $("source").value;
   clearRun();
   updateGutter();
@@ -983,7 +1109,7 @@ $("clear-breakpoints").addEventListener("click", () => { state.breakpoints.clear
 $("previous-line-event").addEventListener("click", () => navigateLine(-1));
 $("next-line-event").addEventListener("click", () => navigateLine(1));
 $("runtime-view").addEventListener("click", () => { if (state.scoreDirty) { showError("Validate or discard the musical draft before leaving it."); return; } state.view = "runtime"; configureView(); status("Execution view. Notes follow the runtime trace."); });
-$("code-view").addEventListener("click", () => { state.view = "code"; configureView(); status("Executable score view. Notes encode the canonical program."); });
+$("code-view").addEventListener("click", () => { if (state.run?.performance) return; state.view = "code"; configureView(); status("Executable score view. Notes encode the canonical program."); });
 $("palette").addEventListener("change", () => { if (state.run) runSource(Boolean(state.comparison)); });
 $("speed").addEventListener("change", () => {
   const resume = state.playing;
@@ -1015,12 +1141,13 @@ $("timeline").addEventListener("click", (event) => {
   else if (state.run && beat >= 0) {
     pause(true);
     state.cursor = Math.min(beat, state.total);
+    syncMediaPosition();
     if (state.view === "runtime") {
       const point = lowerBound(state.eventTimeline, state.cursor + 0.000001) - 1;
       if (point >= 0) {
         const index = state.eventTimeline[point].index;
         selectEvent(index);
-        state.selectedNote = state.notes.findIndex((note) => note.event_id === state.events[index].id);
+        state.selectedNote = state.noteIndices.get(state.events[index].id) ?? -1;
       }
     } else {
       const position = Math.max(0, lowerBound(state.notes, state.cursor) - 1);
@@ -1037,6 +1164,7 @@ $("examples").addEventListener("change", () => {
   if ($("examples").value === "") return;
   const example = state.examples[Number($("examples").value)];
   if (!example) return;
+  $("performances").value = "";
   state.view = "runtime";
   state.source = example.source;
   state.name = example.name;
@@ -1046,6 +1174,7 @@ $("examples").addEventListener("change", () => {
   configureView();
   runSource();
 });
+$("performances").addEventListener("change", () => { if ($("performances").value) loadPerformance($("performances").value); });
 document.addEventListener("keydown", (event) => {
   if ((event.ctrlKey || event.metaKey) && event.key === "Enter") { event.preventDefault(); if (!state.busy) runSource(); return; }
   if (event.key === "Escape") { pause(); return; }
@@ -1059,6 +1188,7 @@ document.addEventListener("visibilitychange", () => { if (document.hidden && sta
 new ResizeObserver(sizeTimeline).observe($("timeline-scroll"));
 
 function invalidateSettings() {
+  if (state.run?.performance) return;
   const code = state.view === "code";
   clearRun();
   state.view = "runtime";
@@ -1101,6 +1231,7 @@ $("score-reset").addEventListener("click", () => { if (state.run) { activateRun(
 async function initialize() {
   const results = await Promise.allSettled([
     fetch("/api/default").then(responseJSON), fetch("/api/examples").then(responseJSON),
+    fetch("/api/performances").then(responseJSON),
   ]);
   if (results[1].status === "fulfilled") {
     state.examples = results[1].value.examples;
@@ -1109,6 +1240,16 @@ async function initialize() {
       option.value = String(index);
       option.textContent = example.name;
       $("examples").append(option);
+    }
+  }
+  if (results[2].status === "fulfilled") {
+    state.performances = results[2].value.performances || [];
+    $("performance-picker").hidden = !state.performances.length;
+    for (const performance of state.performances) {
+      const option = document.createElement("option");
+      option.value = performance.id;
+      option.textContent = performance.title || performance.name;
+      $("performances").append(option);
     }
   }
   const initial = results[0].status === "fulfilled" ? results[0].value : state.examples[0];

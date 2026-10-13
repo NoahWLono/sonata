@@ -6,3 +6,8 @@ __pycache__/
 build/
 dist/
 .DS_Store
+
+# Downloaded synthesis asset and local server/render state
+/local-songs/assets/*.sf2
+/local-songs/*.log
+/local-songs/*.pid
