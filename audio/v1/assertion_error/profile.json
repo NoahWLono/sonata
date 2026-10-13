@@ -1,0 +1,12 @@
+{
+  "event_kinds": [
+    "branch",
+    "error"
+  ],
+  "event_stride": 0.5,
+  "functions": null,
+  "mapping": "semantic",
+  "ranges": {},
+  "variables": null,
+  "version": 1
+}

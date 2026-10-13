@@ -1,0 +1,97 @@
+{
+  "schema": "sonata-verification-1",
+  "passed": true,
+  "checks": {
+    "trace_ids_contiguous": true,
+    "trace_locations_valid": true,
+    "stack_depth_consistent": true,
+    "every_event_audible": true,
+    "note_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_success": true,
+    "reference_behavior_matches": true,
+    "canonical_ast_roundtrip": true,
+    "roundtrip_behavior": true,
+    "deterministic_code_midi": true,
+    "runtime_midi_notes_preserved": true,
+    "wav_duration": true,
+    "wav_non_silent": true
+  },
+  "expected": {
+    "output": [
+      10,
+      9
+    ],
+    "return_value": 21,
+    "globals": {
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "baseline": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 21
+    }
+  },
+  "actual": {
+    "output": [
+      10,
+      9
+    ],
+    "return_value": 21,
+    "globals": {
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "baseline": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 21
+    }
+  },
+  "runtime_error": null,
+  "trace_events": 20,
+  "runtime_notes": 48,
+  "code_notes": 324,
+  "audio": {
+    "duration": 2.685034013605442,
+    "rms": 0.1290746044303486,
+    "sample_rate": 22050
+  },
+  "sha256": {
+    "execution.wav": "445225ac8f27d876dfc05fa279b14d209f2e8bc09871d55863db1978c80eaf69",
+    "execution.mid": "393d9b13f20e47098654f0fb63860bf70a612de78ef9d966dca18964bb5a6c27",
+    "code.mid": "babf187886ab4df0661a423f1d52fa38cd57b9e65f356de414c0d2b3b6352b21"
+  },
+  "shared_dependencies": [
+    "Parser and canonical source printer",
+    "Mido for both MIDI writer and reader",
+    "NumPy numerical runtime",
+    "The codec supplies both encoding and decoding; generated and corruption tests supplement this check"
+  ],
+  "limits": [
+    "Reference comparison covers successful programs; resource-error equivalence is tested separately",
+    "Trace audit verifies source, stack and note correspondence, not every intermediate arithmetic transition",
+    "No human auditory recognition or usefulness is measured"
+  ]
+}

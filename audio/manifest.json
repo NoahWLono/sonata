@@ -1,0 +1,145 @@
+{
+  "binary_search": {
+    "result": 4,
+    "error": null,
+    "events": 89,
+    "notes": 138,
+    "audio": {
+      "duration": 11.310022675736962,
+      "frames": 249386,
+      "sample_rate": 22050,
+      "rms": 0.12661106663929356
+    }
+  },
+  "binary_search_miss": {
+    "result": -1,
+    "error": null,
+    "events": 100,
+    "notes": 156,
+    "audio": {
+      "duration": 12.685034013605442,
+      "frames": 279705,
+      "sample_rate": 22050,
+      "rms": 0.12724983881907276
+    }
+  },
+  "bubble_sort": {
+    "result": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "error": null,
+    "events": 246,
+    "notes": 478,
+    "audio": {
+      "duration": 30.94702947845805,
+      "frames": 682382,
+      "sample_rate": 22050,
+      "rms": 0.12048423712272704
+    }
+  },
+  "control": {
+    "result": 10,
+    "error": null,
+    "events": 92,
+    "notes": 176,
+    "audio": {
+      "duration": 11.685034013605442,
+      "frames": 257655,
+      "sample_rate": 22050,
+      "rms": 0.12328402259165414
+    }
+  },
+  "factorial": {
+    "result": 120,
+    "error": null,
+    "events": 48,
+    "notes": 70,
+    "audio": {
+      "duration": 6.185034013605442,
+      "frames": 136380,
+      "sample_rate": 22050,
+      "rms": 0.1389739045240266
+    }
+  },
+  "fibonacci": {
+    "result": 5,
+    "error": null,
+    "events": 122,
+    "notes": 184,
+    "audio": {
+      "duration": 15.435011337868481,
+      "frames": 340342,
+      "sample_rate": 22050,
+      "rms": 0.13934941231781733
+    }
+  },
+  "fixtures": {
+    "result": 16,
+    "error": null,
+    "events": 72,
+    "notes": 110,
+    "audio": {
+      "duration": 9.185034013605442,
+      "frames": 202530,
+      "sample_rate": 22050,
+      "rms": 0.1150889959053124
+    }
+  },
+  "infinite_recursion": {
+    "result": null,
+    "error": {
+      "kind": "DepthLimit",
+      "message": "Function call depth limit exceeded",
+      "line": 3,
+      "col": 12
+    },
+    "events": 39,
+    "notes": 53,
+    "audio": {
+      "duration": 5.0600453514739225,
+      "frames": 111574,
+      "sample_rate": 22050,
+      "rms": 0.1307620099570247
+    }
+  },
+  "off_by_one": {
+    "result": 10,
+    "error": null,
+    "events": 34,
+    "notes": 36,
+    "audio": {
+      "duration": 4.435011337868481,
+      "frames": 97792,
+      "sample_rate": 22050,
+      "rms": 0.10377398276164909
+    }
+  },
+  "stdlib": {
+    "result": 21,
+    "error": null,
+    "events": 20,
+    "notes": 48,
+    "audio": {
+      "duration": 2.685034013605442,
+      "frames": 59205,
+      "sample_rate": 22050,
+      "rms": 0.12907852983153023
+    }
+  },
+  "sum": {
+    "result": 15,
+    "error": null,
+    "events": 40,
+    "notes": 42,
+    "audio": {
+      "duration": 5.185034013605442,
+      "frames": 114330,
+      "sample_rate": 22050,
+      "rms": 0.10410377837161358
+    }
+  }
+}

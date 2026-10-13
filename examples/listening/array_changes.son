@@ -1,0 +1,9 @@
+let values = [5, 1, 4];
+print(values);
+values[0] = 1;
+values[1] = 5;
+print(values);
+values[1] = 4;
+values[2] = 5;
+print(values);
+return values;

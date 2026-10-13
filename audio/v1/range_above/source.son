@@ -1,0 +1,3 @@
+let level = input(0);
+print(level);
+return level;

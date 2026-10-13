@@ -1,0 +1,44 @@
+[
+  {
+    "archive": "sonata_lang-1.0.0-py3-none-any.whl",
+    "sha256": "4f86baa753d694b3ade53cd9cc39ae96d9d5cb1949cdb72e2c238e08321c3f21",
+    "passed": true,
+    "version": "SONATA 1.0.0",
+    "checks": [
+      "isolated installation",
+      "CLI",
+      "packaged examples",
+      "fixtures",
+      "local modules",
+      "MIDI roundtrip",
+      "WAV",
+      "independent verification",
+      "composition and stems",
+      "trusted Python trace",
+      "recorded MIDI fixtures",
+      "packaged web resources",
+      "loopback server"
+    ]
+  },
+  {
+    "archive": "sonata_lang-1.0.0.tar.gz",
+    "sha256": "5ac830ff773bbc3b8044299a379c57563f7032766976665b88fc58a8d5097aa1",
+    "passed": true,
+    "version": "SONATA 1.0.0",
+    "checks": [
+      "isolated installation",
+      "CLI",
+      "packaged examples",
+      "fixtures",
+      "local modules",
+      "MIDI roundtrip",
+      "WAV",
+      "independent verification",
+      "composition and stems",
+      "trusted Python trace",
+      "recorded MIDI fixtures",
+      "packaged web resources",
+      "loopback server"
+    ]
+  }
+]

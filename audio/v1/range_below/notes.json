@@ -1,0 +1,27 @@
+[
+  {
+    "channel": 0,
+    "duration": 0.88,
+    "event_id": 2,
+    "id": 0,
+    "line": 1,
+    "pitch": 48,
+    "start": 2.0,
+    "trace_index": 2,
+    "velocity": 78,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "cue": "below_range",
+    "duration": 0.88,
+    "event_id": 2,
+    "id": 1,
+    "line": 1,
+    "pitch": 47,
+    "start": 2.0,
+    "trace_index": 2,
+    "velocity": 78,
+    "voice": 0
+  }
+]

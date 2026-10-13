@@ -1,0 +1,14 @@
+{
+  "event_kinds": [
+    "assign",
+    "declare"
+  ],
+  "event_stride": 0.25,
+  "functions": null,
+  "mapping": "semantic",
+  "ranges": {},
+  "variables": [
+    "total"
+  ],
+  "version": 1
+}

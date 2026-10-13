@@ -1,0 +1,63 @@
+{
+  "actual": {
+    "globals": {
+      "result": 55
+    },
+    "output": [
+      55
+    ],
+    "return_value": 55
+  },
+  "audio": {
+    "duration": 11.310022675736962,
+    "rms": 0.12714563071917323,
+    "sample_rate": 22050
+  },
+  "checks": {
+    "canonical_ast_roundtrip": true,
+    "deterministic_code_midi": true,
+    "every_event_audible": true,
+    "note_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_behavior_matches": true,
+    "reference_success": true,
+    "roundtrip_behavior": true,
+    "runtime_midi_notes_preserved": true,
+    "stack_depth_consistent": true,
+    "trace_ids_contiguous": true,
+    "trace_locations_valid": true,
+    "wav_duration": true,
+    "wav_non_silent": true
+  },
+  "code_notes": 356,
+  "expected": {
+    "globals": {
+      "result": 55
+    },
+    "output": [
+      55
+    ],
+    "return_value": 55
+  },
+  "limits": [
+    "Reference comparison covers successful programs; resource-error equivalence is tested separately",
+    "Trace audit verifies source, stack and note correspondence, not every intermediate arithmetic transition",
+    "No human auditory recognition or usefulness is measured"
+  ],
+  "passed": true,
+  "runtime_error": null,
+  "runtime_notes": 134,
+  "schema": "sonata-verification-1",
+  "sha256": {
+    "code.mid": "87e62ff772246fa2a0938fd998be71741f55a74d287efca8d036596e2c30c73b",
+    "execution.mid": "15f8e756cfa028db83450cf7b3ca1dcf36a2e57707295d60c5ebe726afdd2637",
+    "execution.wav": "73aadc40cea63c2555ff30aae47943b6333849cd48b914fbddb24d5f5b440709"
+  },
+  "shared_dependencies": [
+    "Parser and canonical source printer",
+    "Mido for both MIDI writer and reader",
+    "NumPy numerical runtime",
+    "The codec supplies both encoding and decoding; generated and corruption tests supplement this check"
+  ],
+  "trace_events": 89
+}

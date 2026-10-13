@@ -1,0 +1,965 @@
+{
+  "output": [
+    120
+  ],
+  "return_value": 120,
+  "globals": {
+    "result": 120
+  },
+  "trace": [
+    {
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "fn"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "factorial",
+        "function": true
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "statement",
+      "line": 7,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "let"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "call",
+      "line": 7,
+      "col": 14,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "name": "factorial",
+        "arguments": [
+          5
+        ]
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "statement",
+      "line": 5,
+      "col": 5,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "read",
+      "line": 5,
+      "col": 12,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "read",
+      "line": 5,
+      "col": 26,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "call",
+      "line": 5,
+      "col": 16,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "name": "factorial",
+        "arguments": [
+          4
+        ]
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "statement",
+      "line": 5,
+      "col": 5,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 15,
+      "kind": "read",
+      "line": 5,
+      "col": 12,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 16,
+      "kind": "read",
+      "line": 5,
+      "col": 26,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "call",
+      "line": 5,
+      "col": 16,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "name": "factorial",
+        "arguments": [
+          3
+        ]
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 21,
+      "kind": "statement",
+      "line": 5,
+      "col": 5,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 22,
+      "kind": "read",
+      "line": 5,
+      "col": 12,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 23,
+      "kind": "read",
+      "line": 5,
+      "col": 26,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 24,
+      "kind": "call",
+      "line": 5,
+      "col": 16,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "name": "factorial",
+        "arguments": [
+          2
+        ]
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 25,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 26,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 27,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 28,
+      "kind": "statement",
+      "line": 5,
+      "col": 5,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 29,
+      "kind": "read",
+      "line": 5,
+      "col": 12,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 30,
+      "kind": "read",
+      "line": 5,
+      "col": 26,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 31,
+      "kind": "call",
+      "line": 5,
+      "col": 16,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "name": "factorial",
+        "arguments": [
+          1
+        ]
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 32,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 33,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "name": "n",
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 34,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "taken": true
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 35,
+      "kind": "statement",
+      "line": 3,
+      "col": 9,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 36,
+      "kind": "return",
+      "line": 3,
+      "col": 9,
+      "depth": 5,
+      "function": "factorial",
+      "data": {
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 37,
+      "kind": "return",
+      "line": 5,
+      "col": 5,
+      "depth": 4,
+      "function": "factorial",
+      "data": {
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 38,
+      "kind": "return",
+      "line": 5,
+      "col": 5,
+      "depth": 3,
+      "function": "factorial",
+      "data": {
+        "value": 6
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 39,
+      "kind": "return",
+      "line": 5,
+      "col": 5,
+      "depth": 2,
+      "function": "factorial",
+      "data": {
+        "value": 24
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "factorial",
+        "factorial"
+      ]
+    },
+    {
+      "id": 40,
+      "kind": "return",
+      "line": 5,
+      "col": 5,
+      "depth": 1,
+      "function": "factorial",
+      "data": {
+        "value": 120
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "factorial"
+      ]
+    },
+    {
+      "id": 41,
+      "kind": "declare",
+      "line": 7,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "result",
+        "value": 120
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 42,
+      "kind": "statement",
+      "line": 8,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "expr_stmt"
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 43,
+      "kind": "read",
+      "line": 8,
+      "col": 7,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "result",
+        "value": 120
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 44,
+      "kind": "output",
+      "line": 8,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "value": 120
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 45,
+      "kind": "statement",
+      "line": 9,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 46,
+      "kind": "read",
+      "line": 9,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "result",
+        "value": 120
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 47,
+      "kind": "return",
+      "line": 9,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "value": 120
+      },
+      "variables": {
+        "result": 120
+      },
+      "stack": [
+        "<main>"
+      ]
+    }
+  ],
+  "error": null,
+  "instructions": 59
+}

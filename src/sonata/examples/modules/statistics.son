@@ -1,0 +1,8 @@
+import arithmetic;
+fn sum_squares(values) {
+    let total = 0;
+    for i in 0..len(values) {
+        total = total + square(values[i]);
+    }
+    return total;
+}

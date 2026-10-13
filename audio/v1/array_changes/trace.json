@@ -1,0 +1,540 @@
+{
+  "error": null,
+  "globals": {
+    "values": [
+      1,
+      4,
+      5
+    ]
+  },
+  "instructions": 28,
+  "output": [
+    [
+      5,
+      1,
+      4
+    ],
+    [
+      1,
+      5,
+      4
+    ],
+    [
+      1,
+      4,
+      5
+    ]
+  ],
+  "return_value": [
+    1,
+    4,
+    5
+  ],
+  "trace": [
+    {
+      "col": 1,
+      "data": {
+        "statement": "let"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 1,
+      "data": {
+        "name": "values",
+        "value": [
+          5,
+          1,
+          4
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          5,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "expr_stmt"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 2,
+      "kind": "statement",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          5,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 7,
+      "data": {
+        "name": "values",
+        "value": [
+          5,
+          1,
+          4
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 3,
+      "kind": "read",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          5,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "value": [
+          5,
+          1,
+          4
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 4,
+      "kind": "output",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          5,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "assign"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 5,
+      "kind": "statement",
+      "line": 3,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          5,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "index": 0,
+        "name": "values",
+        "value": 1
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 6,
+      "kind": "assign",
+      "line": 3,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "assign"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 7,
+      "kind": "statement",
+      "line": 4,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "index": 1,
+        "name": "values",
+        "value": 5
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 8,
+      "kind": "assign",
+      "line": 4,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "expr_stmt"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 9,
+      "kind": "statement",
+      "line": 5,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "col": 7,
+      "data": {
+        "name": "values",
+        "value": [
+          1,
+          5,
+          4
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 10,
+      "kind": "read",
+      "line": 5,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "value": [
+          1,
+          5,
+          4
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 11,
+      "kind": "output",
+      "line": 5,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "assign"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 12,
+      "kind": "statement",
+      "line": 6,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "index": 1,
+        "name": "values",
+        "value": 4
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 13,
+      "kind": "assign",
+      "line": 6,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "assign"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 14,
+      "kind": "statement",
+      "line": 7,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "index": 2,
+        "name": "values",
+        "value": 5
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 15,
+      "kind": "assign",
+      "line": 7,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "expr_stmt"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 16,
+      "kind": "statement",
+      "line": 8,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 7,
+      "data": {
+        "name": "values",
+        "value": [
+          1,
+          4,
+          5
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 17,
+      "kind": "read",
+      "line": 8,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "value": [
+          1,
+          4,
+          5
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 18,
+      "kind": "output",
+      "line": 8,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "return"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 19,
+      "kind": "statement",
+      "line": 9,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 8,
+      "data": {
+        "name": "values",
+        "value": [
+          1,
+          4,
+          5
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 20,
+      "kind": "read",
+      "line": 9,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "value": [
+          1,
+          4,
+          5
+        ]
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 21,
+      "kind": "return",
+      "line": 9,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "values": [
+          1,
+          4,
+          5
+        ]
+      }
+    }
+  ]
+}

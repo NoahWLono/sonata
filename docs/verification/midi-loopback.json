@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "backend": "Mido/RtMidi virtual loopback",
+  "sent_notes": [
+    60,
+    64,
+    67
+  ],
+  "captured_note_count": 3,
+  "channel_messages_received": 54,
+  "replay": {
+    "version": 1,
+    "sent_messages": 6,
+    "stopped": false,
+    "scheduled_seconds": 0.12
+  },
+  "deterministic_fixture_result": 191,
+  "scope": "Temporary software port on this Linux host; no physical device or DAW tested. Capture timestamps are measured and may vary."
+}

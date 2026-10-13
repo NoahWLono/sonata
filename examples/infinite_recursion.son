@@ -1,0 +1,5 @@
+// This deliberately reaches a configured depth limit.
+fn descend(n) {
+    return descend(n + 1);
+}
+return descend(0);

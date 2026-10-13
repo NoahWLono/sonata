@@ -1,0 +1,508 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>SONATA study task</title><style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:20px;background:#fbfaf5;color:#19242a}pre{background:#eeece2;padding:18px;overflow:auto}pre span{display:block}.selected{background:#ffe092}.timeline{max-height:420px;overflow:auto}button{display:block;margin:4px;padding:8px;width:95%;text-align:left}</style><h1>Task S3E532053B4</h1><p>The function should recurse toward zero and return 4.</p><pre><span id="line-1"> 1  fn count(n) {</span>
+<span id="line-2"> 2      if (n == 0) { return 0; }</span>
+<span id="line-3"> 3      return 1 + count(n + 1);</span>
+<span id="line-4"> 4  }</span>
+<span id="line-5"> 5  return count(4);</span></pre><h2>Execution log</h2><pre>[
+  {
+    &quot;id&quot;: 0,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 1,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;fn&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 1,
+    &quot;kind&quot;: &quot;declare&quot;,
+    &quot;line&quot;: 1,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;function&quot;: true
+    }
+  },
+  {
+    &quot;id&quot;: 2,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 5,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 3,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 5,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        4
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 4,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 5,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 4
+    }
+  },
+  {
+    &quot;id&quot;: 6,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 7,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 8,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 4
+    }
+  },
+  {
+    &quot;id&quot;: 9,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        5
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 10,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 11,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 5
+    }
+  },
+  {
+    &quot;id&quot;: 12,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 13,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 14,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 5
+    }
+  },
+  {
+    &quot;id&quot;: 15,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        6
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 16,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 17,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 6
+    }
+  },
+  {
+    &quot;id&quot;: 18,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 19,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 20,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 6
+    }
+  },
+  {
+    &quot;id&quot;: 21,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        7
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 22,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 23,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 7
+    }
+  },
+  {
+    &quot;id&quot;: 24,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 25,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 26,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 4,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 7
+    }
+  },
+  {
+    &quot;id&quot;: 27,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        8
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 28,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 29,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 8
+    }
+  },
+  {
+    &quot;id&quot;: 30,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 31,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 32,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 5,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 8
+    }
+  },
+  {
+    &quot;id&quot;: 33,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        9
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 34,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 35,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 9
+    }
+  },
+  {
+    &quot;id&quot;: 36,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 37,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 38,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 6,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 9
+    }
+  },
+  {
+    &quot;id&quot;: 39,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        10
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 40,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 41,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 10
+    }
+  },
+  {
+    &quot;id&quot;: 42,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 43,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 44,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 7,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 10
+    }
+  },
+  {
+    &quot;id&quot;: 45,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        11
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 46,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 47,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 11
+    }
+  },
+  {
+    &quot;id&quot;: 48,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 49,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 50,
+    &quot;kind&quot;: &quot;error&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 8,
+    &quot;data&quot;: {
+      &quot;kind&quot;: &quot;DepthLimit&quot;,
+      &quot;message&quot;: &quot;Function call depth limit exceeded&quot;,
+      &quot;line&quot;: 3,
+      &quot;col&quot;: 16
+    }
+  }
+]</pre></html>

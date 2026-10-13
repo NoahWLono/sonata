@@ -1,0 +1,466 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src/sonata_lang.egg-info/PKG-INFO
+writing dependency_links to src/sonata_lang.egg-info/dependency_links.txt
+writing entry points to src/sonata_lang.egg-info/entry_points.txt
+writing requirements to src/sonata_lang.egg-info/requires.txt
+writing top-level names to src/sonata_lang.egg-info/top_level.txt
+reading manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'src/sonata/examples'
+warning: no files found matching '*.md' under directory 'examples'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src/sonata_lang.egg-info/PKG-INFO
+writing dependency_links to src/sonata_lang.egg-info/dependency_links.txt
+writing entry points to src/sonata_lang.egg-info/entry_points.txt
+writing requirements to src/sonata_lang.egg-info/requires.txt
+writing top-level names to src/sonata_lang.egg-info/top_level.txt
+reading manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'src/sonata/examples'
+warning: no files found matching '*.md' under directory 'examples'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+running check
+creating sonata_lang-1.0.0
+creating sonata_lang-1.0.0/debugger
+creating sonata_lang-1.0.0/docs
+creating sonata_lang-1.0.0/examples
+creating sonata_lang-1.0.0/examples/integrations
+creating sonata_lang-1.0.0/examples/listening
+creating sonata_lang-1.0.0/examples/modules
+creating sonata_lang-1.0.0/experiments
+creating sonata_lang-1.0.0/research
+creating sonata_lang-1.0.0/scripts
+creating sonata_lang-1.0.0/src/sonata
+creating sonata_lang-1.0.0/src/sonata/examples
+creating sonata_lang-1.0.0/src/sonata/examples/integrations
+creating sonata_lang-1.0.0/src/sonata/examples/listening
+creating sonata_lang-1.0.0/src/sonata/examples/modules
+creating sonata_lang-1.0.0/src/sonata/web
+creating sonata_lang-1.0.0/src/sonata_lang.egg-info
+creating sonata_lang-1.0.0/tests
+copying files to sonata_lang-1.0.0...
+copying CHANGELOG.md -> sonata_lang-1.0.0
+copying CONTRIBUTING.md -> sonata_lang-1.0.0
+copying LICENSE -> sonata_lang-1.0.0
+copying MANIFEST.in -> sonata_lang-1.0.0
+copying README.md -> sonata_lang-1.0.0
+copying SECURITY.md -> sonata_lang-1.0.0
+copying SPEC.md -> sonata_lang-1.0.0
+copying pyproject.toml -> sonata_lang-1.0.0
+copying requirements-build.txt -> sonata_lang-1.0.0
+copying requirements-lock.txt -> sonata_lang-1.0.0
+copying debugger/README.md -> sonata_lang-1.0.0/debugger
+copying docs/BUILD_PLAN.md -> sonata_lang-1.0.0/docs
+copying docs/DEPENDENCIES.md -> sonata_lang-1.0.0/docs
+copying docs/EMBEDDING.md -> sonata_lang-1.0.0/docs
+copying docs/ENCODING.md -> sonata_lang-1.0.0/docs
+copying docs/LANGUAGE_GUIDE.md -> sonata_lang-1.0.0/docs
+copying docs/LISTENING_GUIDE.md -> sonata_lang-1.0.0/docs
+copying docs/MIDI_GUIDE.md -> sonata_lang-1.0.0/docs
+copying docs/RELEASE.md -> sonata_lang-1.0.0/docs
+copying docs/RELEASE_NOTES_1.0.0.md -> sonata_lang-1.0.0/docs
+copying docs/TUTORIAL.md -> sonata_lang-1.0.0/docs
+copying docs/V1_RELEASE_PLAN.md -> sonata_lang-1.0.0/docs
+copying examples/binary_search.son -> sonata_lang-1.0.0/examples
+copying examples/binary_search_miss.son -> sonata_lang-1.0.0/examples
+copying examples/bubble_sort.son -> sonata_lang-1.0.0/examples
+copying examples/control.son -> sonata_lang-1.0.0/examples
+copying examples/factorial.son -> sonata_lang-1.0.0/examples
+copying examples/fibonacci.son -> sonata_lang-1.0.0/examples
+copying examples/fixtures.json -> sonata_lang-1.0.0/examples
+copying examples/fixtures.son -> sonata_lang-1.0.0/examples
+copying examples/infinite_recursion.son -> sonata_lang-1.0.0/examples
+copying examples/off_by_one.son -> sonata_lang-1.0.0/examples
+copying examples/stdlib.son -> sonata_lang-1.0.0/examples
+copying examples/sum.son -> sonata_lang-1.0.0/examples
+copying examples/integrations/compose.py -> sonata_lang-1.0.0/examples/integrations
+copying examples/integrations/recording.json -> sonata_lang-1.0.0/examples/integrations
+copying examples/integrations/replay_simulation.py -> sonata_lang-1.0.0/examples/integrations
+copying examples/integrations/semantic-profile.json -> sonata_lang-1.0.0/examples/integrations
+copying examples/integrations/trace_python.py -> sonata_lang-1.0.0/examples/integrations
+copying examples/listening/array_changes.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/assertion.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/assertion_error.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/assertion_pass.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/branch.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/branch_false.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/branch_true.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/call_return.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/off_by_one.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/range.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/range_above.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/range_below.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/range_inside.json -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/sum_compact.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/sum_formatted.son -> sonata_lang-1.0.0/examples/listening
+copying examples/listening/watch.son -> sonata_lang-1.0.0/examples/listening
+copying examples/modules/arithmetic.son -> sonata_lang-1.0.0/examples/modules
+copying examples/modules/main.son -> sonata_lang-1.0.0/examples/modules
+copying examples/modules/statistics.son -> sonata_lang-1.0.0/examples/modules
+copying experiments/README.md -> sonata_lang-1.0.0/experiments
+copying experiments/__init__.py -> sonata_lang-1.0.0/experiments
+copying experiments/analyze.py -> sonata_lang-1.0.0/experiments
+copying research/FINDINGS.md -> sonata_lang-1.0.0/research
+copying research/PARTICIPANT_INSTRUCTIONS.md -> sonata_lang-1.0.0/research
+copying research/PILOT.md -> sonata_lang-1.0.0/research
+copying research/PROTOCOL.md -> sonata_lang-1.0.0/research
+copying research/__init__.py -> sonata_lang-1.0.0/research
+copying research/study.py -> sonata_lang-1.0.0/research
+copying scripts/build.py -> sonata_lang-1.0.0/scripts
+copying scripts/build.sh -> sonata_lang-1.0.0/scripts
+copying scripts/check_artifacts.py -> sonata_lang-1.0.0/scripts
+copying scripts/milestone.py -> sonata_lang-1.0.0/scripts
+copying scripts/package_smoke.py -> sonata_lang-1.0.0/scripts
+copying scripts/study.py -> sonata_lang-1.0.0/scripts
+copying scripts/sync_examples.py -> sonata_lang-1.0.0/scripts
+copying scripts/v1_demos.py -> sonata_lang-1.0.0/scripts
+copying scripts/verify_midi_loopback.py -> sonata_lang-1.0.0/scripts
+copying scripts/video.py -> sonata_lang-1.0.0/scripts
+copying src/sonata/__init__.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/__main__.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/audio.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/cli.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/cli_io.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/codec.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/comparison.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/language.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/loader.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/midi.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/midi_guard.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/music.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/musiclib.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/ports.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/profiles.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/python_trace.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/reference.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/runtime.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/server.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/studio.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/validation.py -> sonata_lang-1.0.0/src/sonata
+copying src/sonata/examples/binary_search.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/binary_search_miss.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/bubble_sort.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/control.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/factorial.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/fibonacci.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/fixtures.json -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/fixtures.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/infinite_recursion.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/off_by_one.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/stdlib.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/sum.son -> sonata_lang-1.0.0/src/sonata/examples
+copying src/sonata/examples/integrations/compose.py -> sonata_lang-1.0.0/src/sonata/examples/integrations
+copying src/sonata/examples/integrations/recording.json -> sonata_lang-1.0.0/src/sonata/examples/integrations
+copying src/sonata/examples/integrations/replay_simulation.py -> sonata_lang-1.0.0/src/sonata/examples/integrations
+copying src/sonata/examples/integrations/semantic-profile.json -> sonata_lang-1.0.0/src/sonata/examples/integrations
+copying src/sonata/examples/integrations/trace_python.py -> sonata_lang-1.0.0/src/sonata/examples/integrations
+copying src/sonata/examples/listening/array_changes.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/assertion.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/assertion_error.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/assertion_pass.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/branch.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/branch_false.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/branch_true.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/call_return.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/off_by_one.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/range.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/range_above.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/range_below.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/range_inside.json -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/sum_compact.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/sum_formatted.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/listening/watch.son -> sonata_lang-1.0.0/src/sonata/examples/listening
+copying src/sonata/examples/modules/arithmetic.son -> sonata_lang-1.0.0/src/sonata/examples/modules
+copying src/sonata/examples/modules/main.son -> sonata_lang-1.0.0/src/sonata/examples/modules
+copying src/sonata/examples/modules/statistics.son -> sonata_lang-1.0.0/src/sonata/examples/modules
+copying src/sonata/web/app.js -> sonata_lang-1.0.0/src/sonata/web
+copying src/sonata/web/index.html -> sonata_lang-1.0.0/src/sonata/web
+copying src/sonata/web/style.css -> sonata_lang-1.0.0/src/sonata/web
+copying src/sonata_lang.egg-info/PKG-INFO -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying src/sonata_lang.egg-info/SOURCES.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying src/sonata_lang.egg-info/dependency_links.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying src/sonata_lang.egg-info/entry_points.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying src/sonata_lang.egg-info/requires.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying src/sonata_lang.egg-info/top_level.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+copying tests/browser_v1.cjs -> sonata_lang-1.0.0/tests
+copying tests/test_cli.py -> sonata_lang-1.0.0/tests
+copying tests/test_codec.py -> sonata_lang-1.0.0/tests
+copying tests/test_examples.py -> sonata_lang-1.0.0/tests
+copying tests/test_experiments.py -> sonata_lang-1.0.0/tests
+copying tests/test_language.py -> sonata_lang-1.0.0/tests
+copying tests/test_manual_examples.py -> sonata_lang-1.0.0/tests
+copying tests/test_milestone.py -> sonata_lang-1.0.0/tests
+copying tests/test_music.py -> sonata_lang-1.0.0/tests
+copying tests/test_packaging.py -> sonata_lang-1.0.0/tests
+copying tests/test_reference.py -> sonata_lang-1.0.0/tests
+copying tests/test_review_regressions.py -> sonata_lang-1.0.0/tests
+copying tests/test_server.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_cli.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_demos.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_language.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_modules.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_music_library.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_music_ports.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_music_profiles.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_music_python_trace.py -> sonata_lang-1.0.0/tests
+copying tests/test_v1_server.py -> sonata_lang-1.0.0/tests
+copying tests/test_validation.py -> sonata_lang-1.0.0/tests
+copying tests/test_web_v1.py -> sonata_lang-1.0.0/tests
+copying src/sonata_lang.egg-info/SOURCES.txt -> sonata_lang-1.0.0/src/sonata_lang.egg-info
+Writing sonata_lang-1.0.0/setup.cfg
+Creating tar archive
+removing 'sonata_lang-1.0.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src/sonata_lang.egg-info/PKG-INFO
+writing dependency_links to src/sonata_lang.egg-info/dependency_links.txt
+writing entry points to src/sonata_lang.egg-info/entry_points.txt
+writing requirements to src/sonata_lang.egg-info/requires.txt
+writing top-level names to src/sonata_lang.egg-info/top_level.txt
+reading manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'src/sonata/examples'
+warning: no files found matching '*.md' under directory 'examples'
+no previously-included directories found matching 'docs/verification'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/sonata
+copying src/sonata/validation.py -> build/lib/sonata
+copying src/sonata/studio.py -> build/lib/sonata
+copying src/sonata/server.py -> build/lib/sonata
+copying src/sonata/runtime.py -> build/lib/sonata
+copying src/sonata/reference.py -> build/lib/sonata
+copying src/sonata/python_trace.py -> build/lib/sonata
+copying src/sonata/profiles.py -> build/lib/sonata
+copying src/sonata/ports.py -> build/lib/sonata
+copying src/sonata/musiclib.py -> build/lib/sonata
+copying src/sonata/music.py -> build/lib/sonata
+copying src/sonata/midi_guard.py -> build/lib/sonata
+copying src/sonata/midi.py -> build/lib/sonata
+copying src/sonata/loader.py -> build/lib/sonata
+copying src/sonata/language.py -> build/lib/sonata
+copying src/sonata/comparison.py -> build/lib/sonata
+copying src/sonata/codec.py -> build/lib/sonata
+copying src/sonata/cli_io.py -> build/lib/sonata
+copying src/sonata/cli.py -> build/lib/sonata
+copying src/sonata/audio.py -> build/lib/sonata
+copying src/sonata/__main__.py -> build/lib/sonata
+copying src/sonata/__init__.py -> build/lib/sonata
+creating build/lib/sonata/examples/integrations
+copying src/sonata/examples/integrations/trace_python.py -> build/lib/sonata/examples/integrations
+copying src/sonata/examples/integrations/replay_simulation.py -> build/lib/sonata/examples/integrations
+copying src/sonata/examples/integrations/compose.py -> build/lib/sonata/examples/integrations
+running egg_info
+writing src/sonata_lang.egg-info/PKG-INFO
+writing dependency_links to src/sonata_lang.egg-info/dependency_links.txt
+writing entry points to src/sonata_lang.egg-info/entry_points.txt
+writing requirements to src/sonata_lang.egg-info/requires.txt
+writing top-level names to src/sonata_lang.egg-info/top_level.txt
+reading manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.md' under directory 'src/sonata/examples'
+warning: no files found matching '*.md' under directory 'examples'
+no previously-included directories found matching 'docs/verification'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'src/sonata_lang.egg-info/SOURCES.txt'
+creating build/lib/sonata/web
+copying src/sonata/web/style.css -> build/lib/sonata/web
+copying src/sonata/web/index.html -> build/lib/sonata/web
+copying src/sonata/web/app.js -> build/lib/sonata/web
+copying src/sonata/examples/sum.son -> build/lib/sonata/examples
+copying src/sonata/examples/stdlib.son -> build/lib/sonata/examples
+copying src/sonata/examples/off_by_one.son -> build/lib/sonata/examples
+copying src/sonata/examples/infinite_recursion.son -> build/lib/sonata/examples
+copying src/sonata/examples/fixtures.son -> build/lib/sonata/examples
+copying src/sonata/examples/fixtures.json -> build/lib/sonata/examples
+copying src/sonata/examples/fibonacci.son -> build/lib/sonata/examples
+copying src/sonata/examples/factorial.son -> build/lib/sonata/examples
+copying src/sonata/examples/control.son -> build/lib/sonata/examples
+copying src/sonata/examples/bubble_sort.son -> build/lib/sonata/examples
+copying src/sonata/examples/binary_search_miss.son -> build/lib/sonata/examples
+copying src/sonata/examples/binary_search.son -> build/lib/sonata/examples
+creating build/lib/sonata/examples/modules
+copying src/sonata/examples/modules/statistics.son -> build/lib/sonata/examples/modules
+copying src/sonata/examples/modules/main.son -> build/lib/sonata/examples/modules
+copying src/sonata/examples/modules/arithmetic.son -> build/lib/sonata/examples/modules
+creating build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/watch.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/sum_formatted.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/sum_compact.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/range_inside.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/range_below.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/range_above.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/range.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/off_by_one.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/call_return.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/branch_true.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/branch_false.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/branch.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/assertion_pass.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/assertion_error.json -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/assertion.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/listening/array_changes.son -> build/lib/sonata/examples/listening
+copying src/sonata/examples/integrations/semantic-profile.json -> build/lib/sonata/examples/integrations
+copying src/sonata/examples/integrations/recording.json -> build/lib/sonata/examples/integrations
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/sonata
+creating build/bdist.linux-x86_64/wheel/sonata/web
+copying build/lib/sonata/web/app.js -> build/bdist.linux-x86_64/wheel/./sonata/web
+copying build/lib/sonata/web/index.html -> build/bdist.linux-x86_64/wheel/./sonata/web
+copying build/lib/sonata/web/style.css -> build/bdist.linux-x86_64/wheel/./sonata/web
+creating build/bdist.linux-x86_64/wheel/sonata/examples
+creating build/bdist.linux-x86_64/wheel/sonata/examples/listening
+copying build/lib/sonata/examples/listening/array_changes.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/assertion.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/assertion_error.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/assertion_pass.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/branch.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/branch_false.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/branch_true.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/call_return.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/off_by_one.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/range.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/range_above.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/range_below.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/range_inside.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/sum_compact.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/sum_formatted.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+copying build/lib/sonata/examples/listening/watch.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/listening
+creating build/bdist.linux-x86_64/wheel/sonata/examples/modules
+copying build/lib/sonata/examples/modules/arithmetic.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/modules
+copying build/lib/sonata/examples/modules/main.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/modules
+copying build/lib/sonata/examples/modules/statistics.son -> build/bdist.linux-x86_64/wheel/./sonata/examples/modules
+copying build/lib/sonata/examples/binary_search.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/binary_search_miss.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/bubble_sort.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/control.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/factorial.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/fibonacci.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/fixtures.json -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/fixtures.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/infinite_recursion.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/off_by_one.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/stdlib.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+copying build/lib/sonata/examples/sum.son -> build/bdist.linux-x86_64/wheel/./sonata/examples
+creating build/bdist.linux-x86_64/wheel/sonata/examples/integrations
+copying build/lib/sonata/examples/integrations/recording.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/integrations
+copying build/lib/sonata/examples/integrations/semantic-profile.json -> build/bdist.linux-x86_64/wheel/./sonata/examples/integrations
+copying build/lib/sonata/examples/integrations/compose.py -> build/bdist.linux-x86_64/wheel/./sonata/examples/integrations
+copying build/lib/sonata/examples/integrations/replay_simulation.py -> build/bdist.linux-x86_64/wheel/./sonata/examples/integrations
+copying build/lib/sonata/examples/integrations/trace_python.py -> build/bdist.linux-x86_64/wheel/./sonata/examples/integrations
+copying build/lib/sonata/__init__.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/__main__.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/audio.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/cli.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/cli_io.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/codec.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/comparison.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/language.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/loader.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/midi.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/midi_guard.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/music.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/musiclib.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/ports.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/profiles.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/python_trace.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/reference.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/runtime.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/server.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/studio.py -> build/bdist.linux-x86_64/wheel/./sonata
+copying build/lib/sonata/validation.py -> build/bdist.linux-x86_64/wheel/./sonata
+running install_egg_info
+Copying src/sonata_lang.egg-info to build/bdist.linux-x86_64/wheel/./sonata_lang-1.0.0-py3.14.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/sonata_lang-1.0.0.dist-info/WHEEL
+creating '<checkout>/dist/.tmp-85ab77i5/sonata_lang-1.0.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'sonata/__init__.py'
+adding 'sonata/__main__.py'
+adding 'sonata/audio.py'
+adding 'sonata/cli.py'
+adding 'sonata/cli_io.py'
+adding 'sonata/codec.py'
+adding 'sonata/comparison.py'
+adding 'sonata/language.py'
+adding 'sonata/loader.py'
+adding 'sonata/midi.py'
+adding 'sonata/midi_guard.py'
+adding 'sonata/music.py'
+adding 'sonata/musiclib.py'
+adding 'sonata/ports.py'
+adding 'sonata/profiles.py'
+adding 'sonata/python_trace.py'
+adding 'sonata/reference.py'
+adding 'sonata/runtime.py'
+adding 'sonata/server.py'
+adding 'sonata/studio.py'
+adding 'sonata/validation.py'
+adding 'sonata/examples/binary_search.son'
+adding 'sonata/examples/binary_search_miss.son'
+adding 'sonata/examples/bubble_sort.son'
+adding 'sonata/examples/control.son'
+adding 'sonata/examples/factorial.son'
+adding 'sonata/examples/fibonacci.son'
+adding 'sonata/examples/fixtures.json'
+adding 'sonata/examples/fixtures.son'
+adding 'sonata/examples/infinite_recursion.son'
+adding 'sonata/examples/off_by_one.son'
+adding 'sonata/examples/stdlib.son'
+adding 'sonata/examples/sum.son'
+adding 'sonata/examples/integrations/compose.py'
+adding 'sonata/examples/integrations/recording.json'
+adding 'sonata/examples/integrations/replay_simulation.py'
+adding 'sonata/examples/integrations/semantic-profile.json'
+adding 'sonata/examples/integrations/trace_python.py'
+adding 'sonata/examples/listening/array_changes.son'
+adding 'sonata/examples/listening/assertion.son'
+adding 'sonata/examples/listening/assertion_error.json'
+adding 'sonata/examples/listening/assertion_pass.json'
+adding 'sonata/examples/listening/branch.son'
+adding 'sonata/examples/listening/branch_false.json'
+adding 'sonata/examples/listening/branch_true.json'
+adding 'sonata/examples/listening/call_return.son'
+adding 'sonata/examples/listening/off_by_one.son'
+adding 'sonata/examples/listening/range.son'
+adding 'sonata/examples/listening/range_above.json'
+adding 'sonata/examples/listening/range_below.json'
+adding 'sonata/examples/listening/range_inside.json'
+adding 'sonata/examples/listening/sum_compact.son'
+adding 'sonata/examples/listening/sum_formatted.son'
+adding 'sonata/examples/listening/watch.son'
+adding 'sonata/examples/modules/arithmetic.son'
+adding 'sonata/examples/modules/main.son'
+adding 'sonata/examples/modules/statistics.son'
+adding 'sonata/web/app.js'
+adding 'sonata/web/index.html'
+adding 'sonata/web/style.css'
+adding 'sonata_lang-1.0.0.dist-info/licenses/LICENSE'
+adding 'sonata_lang-1.0.0.dist-info/METADATA'
+adding 'sonata_lang-1.0.0.dist-info/WHEEL'
+adding 'sonata_lang-1.0.0.dist-info/entry_points.txt'
+adding 'sonata_lang-1.0.0.dist-info/top_level.txt'
+adding 'sonata_lang-1.0.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built sonata_lang-1.0.0.tar.gz and sonata_lang-1.0.0-py3-none-any.whl

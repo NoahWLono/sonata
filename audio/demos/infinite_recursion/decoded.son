@@ -1,0 +1,4 @@
+fn descend(n) {
+    return descend(n + 1);
+}
+return descend(0);

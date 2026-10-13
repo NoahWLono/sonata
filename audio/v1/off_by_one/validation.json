@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "canonical_ast_roundtrip": true,
+    "note_event_ids_known": true,
+    "note_source_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_error_kind_matches": true,
+    "reference_observables_match": true,
+    "roundtrip_error_kind_matches": true,
+    "roundtrip_observables_match": true,
+    "runtime_midi_exact": true,
+    "wav_duration_matches": true,
+    "wav_non_silent": true
+  },
+  "passed": true,
+  "scope": "Independent evaluator observables and expected assertion errors, score roundtrip, note provenance, and re-read MIDI/WAV. Shared parser and codec remain trust dependencies."
+}

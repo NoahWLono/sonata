@@ -1,0 +1,9 @@
+{
+  "schema": "sonata-midi-recording",
+  "version": 1,
+  "duration_us": 500000,
+  "messages": [
+    {"time_us": 0, "message": {"type": "note_on", "channel": 0, "note": 60, "velocity": 90}},
+    {"time_us": 500000, "message": {"type": "note_off", "channel": 0, "note": 60, "velocity": 0}}
+  ]
+}

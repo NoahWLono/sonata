@@ -1,0 +1,11 @@
+experiments/README.md:59  negative-parallelism  FIXED  Replaced contrast with separate symbolic-scope and unmeasured-perception sentences.
+research/PROTOCOL.md:44  negative-parallelism  FIXED  Stated shared program structure and unmeasured task difficulty separately.
+research/PROTOCOL.md:65  negative-parallelism  FIXED  Stated that directories separate materials and the experimenter controls access.
+research/PROTOCOL.md:160 negative-parallelism  FIXED  Stated that missing denominators are represented as null.
+research/FINDINGS.md:5  negative-parallelism  FIXED  Generated assignments specify future trials.
+research/FINDINGS.md:11 bold-lead-in          KEPT   Each question needs an explicit evidence status; the repeated form aids comparison.
+research/FINDINGS.md:23 negative-parallelism  FIXED  Separated signal measurement from the required perceptual study.
+research/FINDINGS.md:57 copulative-avoidance  FIXED  Collisions prevent lossless source recovery.
+research/FINDINGS.md:64 negative-parallelism  FIXED  Separated implementation omissions from universal perceptual claims.
+research/FINDINGS.md:57 trailing-participle   FIXED  Converted the causal clause into its own sentence.
+FIXED 9; KEPT 1.

@@ -1,0 +1,7 @@
+V1_RESULTS.md:89 negative-parallelism KEPT Distinguishes the proven symbolic decoding domain from unimplemented audio transcription.
+V1_REVIEW.md:6 negative-parallelism KEPT States the actual review scope and avoids implying an exhaustive security audit.
+README.md:88 negative-parallelism KEPT Corrects the likely assumption that arbitrary MIDI can execute as SONATA source.
+RELEASE.md:22 ai-vocabulary KEPT Underscore names an actual Python identifier character.
+V1_RELEASE_PLAN.md:34 trailing-participle FIXED New syntax must be encoded through actual notes and preserve canonical ASTs after module bundling.
+FIXED: 1
+KEPT: 4

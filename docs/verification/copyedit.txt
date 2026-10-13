@@ -1,0 +1,8 @@
+README.md:3  bold-lead-in  KEPT  Four brief emphasis points distinguish motto, evidence status and the two encodings; headings remain the document structure.
+README.md:186  negative-parallelism  FIXED  Separate pinned-environment evidence from unestablished cross-platform reproducibility.
+docs/ENCODING.md:45  negative-parallelism  FIXED  State exact rhythmic-alignment requirement directly.
+docs/ENCODING.md:57  negative-parallelism  FIXED  State the finite SC1 argument's scope and the separate evidence needed for perception.
+docs/ENCODING.md:84  negative-parallelism  FIXED  State which runtime information is omitted.
+docs/ENCODING.md:96  negative-parallelism  FIXED  Separate the computational array bound from unmeasured perception.
+docs/ENCODING.md:118  negative-parallelism  FIXED  State that listener preferences remain unmeasured.
+FIXED 6; KEPT 1.

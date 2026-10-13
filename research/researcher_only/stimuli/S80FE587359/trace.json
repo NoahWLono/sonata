@@ -1,0 +1,559 @@
+{
+  "output": [
+    4
+  ],
+  "return_value": 4,
+  "globals": {
+    "i": 4
+  },
+  "trace": [
+    {
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "let"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 0
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "statement",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "while"
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "read",
+      "line": 2,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 0
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "loop",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "taken": true,
+        "iteration": 0
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "assign"
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "read",
+      "line": 3,
+      "col": 9,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 0
+      },
+      "variables": {
+        "i": 0
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "assign",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 1
+      },
+      "variables": {
+        "i": 1
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "read",
+      "line": 2,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 1
+      },
+      "variables": {
+        "i": 1
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "loop",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "taken": true,
+        "iteration": 1
+      },
+      "variables": {
+        "i": 1
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "assign"
+      },
+      "variables": {
+        "i": 1
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "read",
+      "line": 3,
+      "col": 9,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 1
+      },
+      "variables": {
+        "i": 1
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "assign",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 2
+      },
+      "variables": {
+        "i": 2
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "read",
+      "line": 2,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 2
+      },
+      "variables": {
+        "i": 2
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "loop",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "taken": true,
+        "iteration": 2
+      },
+      "variables": {
+        "i": 2
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 15,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "assign"
+      },
+      "variables": {
+        "i": 2
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 16,
+      "kind": "read",
+      "line": 3,
+      "col": 9,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 2
+      },
+      "variables": {
+        "i": 2
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "assign",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 3
+      },
+      "variables": {
+        "i": 3
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "read",
+      "line": 2,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 3
+      },
+      "variables": {
+        "i": 3
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "loop",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "taken": true,
+        "iteration": 3
+      },
+      "variables": {
+        "i": 3
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "assign"
+      },
+      "variables": {
+        "i": 3
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 21,
+      "kind": "read",
+      "line": 3,
+      "col": 9,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 3
+      },
+      "variables": {
+        "i": 3
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 22,
+      "kind": "assign",
+      "line": 3,
+      "col": 5,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 23,
+      "kind": "read",
+      "line": 2,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 24,
+      "kind": "loop",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "taken": false,
+        "iteration": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 25,
+      "kind": "statement",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "expr_stmt"
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 26,
+      "kind": "read",
+      "line": 5,
+      "col": 7,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 27,
+      "kind": "output",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 28,
+      "kind": "statement",
+      "line": 6,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 29,
+      "kind": "read",
+      "line": 6,
+      "col": 8,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "i",
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 30,
+      "kind": "return",
+      "line": 6,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "value": 4
+      },
+      "variables": {
+        "i": 4
+      },
+      "stack": [
+        "<main>"
+      ]
+    }
+  ],
+  "error": null,
+  "instructions": 44
+}

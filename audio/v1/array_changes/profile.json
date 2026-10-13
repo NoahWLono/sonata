@@ -1,0 +1,16 @@
+{
+  "event_kinds": [
+    "output"
+  ],
+  "event_stride": 1.0,
+  "functions": null,
+  "mapping": "semantic",
+  "ranges": {
+    "*": [
+      0,
+      7
+    ]
+  },
+  "variables": null,
+  "version": 1
+}

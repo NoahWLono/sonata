@@ -1,0 +1,4 @@
+fn double(n) {
+    return n * 2;
+}
+return double(3);

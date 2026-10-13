@@ -1,0 +1,1071 @@
+{
+  "claims": "Symbolic-note recovery and PCM statistics only; no listening or usability results.",
+  "demos": {
+    "binary_search": {
+      "input_sha256": {
+        "code.mid": "38640e13519c4caba56a3ff04c281199eff33eff6ba2b885b1417737eb3ccf98",
+        "execution.wav": "a52e6fededce7add5fd2ba8fd71aa2431c79c0986c71f74cf1119ecba7d11c85",
+        "notes.json": "d630201414418cf05cb4a6bdfc6b57ed038385947ca9aa31b217fbfca8264d29",
+        "trace.json": "c6e492a0906ae47aefcdd9fd50cfed969c4c74bdac1273183a1d5b80f5c95e69"
+      },
+      "kind_counts": {
+        "assign": 2,
+        "branch": 5,
+        "call": 1,
+        "declare": 7,
+        "loop": 3,
+        "output": 4,
+        "read": 44,
+        "return": 2,
+        "statement": 21
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 89,
+            "decoded_symbols": 89,
+            "exact_sequence": true,
+            "expected_symbols": 89
+          },
+          "event_count": 89,
+          "events_in_identity_collision_groups": 88,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 89,
+            "decoded_symbols": 89,
+            "exact_sequence": true,
+            "expected_symbols": 89
+          },
+          "identity_collision_groups": 8,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 89,
+            "decoded_symbols": 89,
+            "exact_sequence": true,
+            "expected_symbols": 89
+          },
+          "note_count": 89,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 89,
+              "decoded_symbols": 89,
+              "exact_sequence": true,
+              "expected_symbols": 89
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 89,
+              "decoded_symbols": 89,
+              "exact_sequence": true,
+              "expected_symbols": 89
+            }
+          },
+          "unique_event_identities": 69,
+          "unique_note_signatures": 9
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.0449438202247191,
+            "correct_symbols": 4,
+            "decoded_symbols": 89,
+            "exact_sequence": false,
+            "expected_symbols": 89
+          },
+          "event_count": 89,
+          "events_in_identity_collision_groups": 88,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 89,
+            "decoded_symbols": 89,
+            "exact_sequence": true,
+            "expected_symbols": 89
+          },
+          "identity_collision_groups": 8,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 89,
+            "decoded_symbols": 89,
+            "exact_sequence": true,
+            "expected_symbols": 89
+          },
+          "note_count": 89,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 89,
+              "decoded_symbols": 89,
+              "exact_sequence": true,
+              "expected_symbols": 89
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 89,
+              "decoded_symbols": 89,
+              "exact_sequence": true,
+              "expected_symbols": 89
+            }
+          },
+          "unique_event_identities": 69,
+          "unique_note_signatures": 9
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 89,
+          "event_count": 89,
+          "events_in_identity_collision_groups": 70,
+          "events_in_kind_collision_groups": 52,
+          "identity_collision_groups": 16,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 10,
+          "matches_current_sonify": true,
+          "note_count": 138,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.8089887640449438,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 69,
+          "unique_note_signatures": 33
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 11.310022675736962,
+        "energy_normalized_sample_sum": 3997.502549308352,
+        "frames": 249386,
+        "peak_normalized": 0.746246337890625,
+        "rms_normalized": 0.12660718127524262,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 793.9796117556282,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "binary_search_miss": {
+      "input_sha256": {
+        "code.mid": "1842e56ea41fb1d669d6bdb25449223853835827eccf636fd160b6aa87553f34",
+        "execution.wav": "7322771161037a79f5101f26e5d07f77dc640db8bd9aa56b8bc591b4b54ef5c0",
+        "notes.json": "18b5a1d3c21e229b1b616d52b61900a0d5a45b5022c1eba34a33531a64411b67",
+        "trace.json": "59e39eb876b75d57659dff1b5c61e35f36ff61c6327083d0ba60a4c5b1aa06f8"
+      },
+      "kind_counts": {
+        "assign": 3,
+        "branch": 6,
+        "call": 1,
+        "declare": 7,
+        "loop": 4,
+        "output": 4,
+        "read": 50,
+        "return": 2,
+        "statement": 23
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 100,
+            "decoded_symbols": 100,
+            "exact_sequence": true,
+            "expected_symbols": 100
+          },
+          "event_count": 100,
+          "events_in_identity_collision_groups": 99,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 100,
+            "decoded_symbols": 100,
+            "exact_sequence": true,
+            "expected_symbols": 100
+          },
+          "identity_collision_groups": 8,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 100,
+            "decoded_symbols": 100,
+            "exact_sequence": true,
+            "expected_symbols": 100
+          },
+          "note_count": 100,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 100,
+              "decoded_symbols": 100,
+              "exact_sequence": true,
+              "expected_symbols": 100
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 100,
+              "decoded_symbols": 100,
+              "exact_sequence": true,
+              "expected_symbols": 100
+            }
+          },
+          "unique_event_identities": 73,
+          "unique_note_signatures": 9
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.05,
+            "correct_symbols": 5,
+            "decoded_symbols": 100,
+            "exact_sequence": false,
+            "expected_symbols": 100
+          },
+          "event_count": 100,
+          "events_in_identity_collision_groups": 99,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 100,
+            "decoded_symbols": 100,
+            "exact_sequence": true,
+            "expected_symbols": 100
+          },
+          "identity_collision_groups": 8,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 100,
+            "decoded_symbols": 100,
+            "exact_sequence": true,
+            "expected_symbols": 100
+          },
+          "note_count": 100,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 100,
+              "decoded_symbols": 100,
+              "exact_sequence": true,
+              "expected_symbols": 100
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 100,
+              "decoded_symbols": 100,
+              "exact_sequence": true,
+              "expected_symbols": 100
+            }
+          },
+          "unique_event_identities": 73,
+          "unique_note_signatures": 9
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 100,
+          "event_count": 100,
+          "events_in_identity_collision_groups": 77,
+          "events_in_kind_collision_groups": 58,
+          "identity_collision_groups": 15,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 10,
+          "matches_current_sonify": true,
+          "note_count": 156,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.81,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 73,
+          "unique_note_signatures": 34
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 12.685034013605442,
+        "energy_normalized_sample_sum": 4528.851566054858,
+        "frames": 279705,
+        "peak_normalized": 0.780426025390625,
+        "rms_normalized": 0.1272459382884476,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 782.6800062391385,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "bubble_sort": {
+      "input_sha256": {
+        "code.mid": "372086c4b3b3a59e08c525bd9572bd9ae8c55fb64be67d58f9060e9e109c3963",
+        "execution.wav": "b40d822974289f894d7b4ed96dba21e8824d9290d8334cb4cc6ed024dc792d64",
+        "notes.json": "e54bf3434a7596e75cc58a7aee8345f5cca121af02cdf1b02eaac38bea242e24",
+        "trace.json": "57cd15386a0625e4ffae01b3870bd90d62ec4d5d97e4055ca6dde3e21dcd73f5"
+      },
+      "kind_counts": {
+        "assign": 27,
+        "branch": 10,
+        "declare": 7,
+        "loop": 21,
+        "output": 6,
+        "read": 132,
+        "return": 1,
+        "statement": 42
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 246,
+            "decoded_symbols": 246,
+            "exact_sequence": true,
+            "expected_symbols": 246
+          },
+          "event_count": 246,
+          "events_in_identity_collision_groups": 245,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 246,
+            "decoded_symbols": 246,
+            "exact_sequence": true,
+            "expected_symbols": 246
+          },
+          "identity_collision_groups": 7,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 246,
+            "decoded_symbols": 246,
+            "exact_sequence": true,
+            "expected_symbols": 246
+          },
+          "note_count": 246,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 246,
+              "decoded_symbols": 246,
+              "exact_sequence": true,
+              "expected_symbols": 246
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 246,
+              "decoded_symbols": 246,
+              "exact_sequence": true,
+              "expected_symbols": 246
+            }
+          },
+          "unique_event_identities": 149,
+          "unique_note_signatures": 8
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.11382113821138211,
+            "correct_symbols": 28,
+            "decoded_symbols": 246,
+            "exact_sequence": false,
+            "expected_symbols": 246
+          },
+          "event_count": 246,
+          "events_in_identity_collision_groups": 245,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 246,
+            "decoded_symbols": 246,
+            "exact_sequence": true,
+            "expected_symbols": 246
+          },
+          "identity_collision_groups": 7,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 246,
+            "decoded_symbols": 246,
+            "exact_sequence": true,
+            "expected_symbols": 246
+          },
+          "note_count": 246,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 246,
+              "decoded_symbols": 246,
+              "exact_sequence": true,
+              "expected_symbols": 246
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 246,
+              "decoded_symbols": 246,
+              "exact_sequence": true,
+              "expected_symbols": 246
+            }
+          },
+          "unique_event_identities": 149,
+          "unique_note_signatures": 8
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 246,
+          "event_count": 246,
+          "events_in_identity_collision_groups": 208,
+          "events_in_kind_collision_groups": 170,
+          "identity_collision_groups": 23,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 11,
+          "matches_current_sonify": true,
+          "note_count": 478,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.7195121951219512,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 149,
+          "unique_note_signatures": 50
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 30.94702947845805,
+        "energy_normalized_sample_sum": 9905.16252922453,
+        "frames": 682382,
+        "peak_normalized": 0.80438232421875,
+        "rms_normalized": 0.12048057230212639,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 301.58293592360934,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "fibonacci": {
+      "input_sha256": {
+        "code.mid": "801c7c00378a2fd71196a033289fc0c2f6cec6c4889077b2af6c4157f2ec5b2e",
+        "execution.wav": "37aefc43ed6fcd1eb232934187c3f6af2a3a8ba3e56601cb9f46525e90a82fea",
+        "notes.json": "26a3a6e42f670d6e155e180cb0d6b078b352430225ddfc0953730118c4d63965",
+        "trace.json": "ef7cbb8ca17e2d683aa102eb15888744210dee1112e205253f3ecb1b2f076d31"
+      },
+      "kind_counts": {
+        "branch": 15,
+        "call": 15,
+        "declare": 2,
+        "output": 1,
+        "read": 39,
+        "return": 16,
+        "statement": 34
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 122,
+            "decoded_symbols": 122,
+            "exact_sequence": true,
+            "expected_symbols": 122
+          },
+          "event_count": 122,
+          "events_in_identity_collision_groups": 121,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 122,
+            "decoded_symbols": 122,
+            "exact_sequence": true,
+            "expected_symbols": 122
+          },
+          "identity_collision_groups": 6,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 122,
+            "decoded_symbols": 122,
+            "exact_sequence": true,
+            "expected_symbols": 122
+          },
+          "note_count": 122,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 122,
+              "decoded_symbols": 122,
+              "exact_sequence": true,
+              "expected_symbols": 122
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 122,
+              "decoded_symbols": 122,
+              "exact_sequence": true,
+              "expected_symbols": 122
+            }
+          },
+          "unique_event_identities": 81,
+          "unique_note_signatures": 7
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.13114754098360656,
+            "correct_symbols": 16,
+            "decoded_symbols": 122,
+            "exact_sequence": false,
+            "expected_symbols": 122
+          },
+          "event_count": 122,
+          "events_in_identity_collision_groups": 121,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 122,
+            "decoded_symbols": 122,
+            "exact_sequence": true,
+            "expected_symbols": 122
+          },
+          "identity_collision_groups": 6,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 122,
+            "decoded_symbols": 122,
+            "exact_sequence": true,
+            "expected_symbols": 122
+          },
+          "note_count": 122,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 122,
+              "decoded_symbols": 122,
+              "exact_sequence": true,
+              "expected_symbols": 122
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 122,
+              "decoded_symbols": 122,
+              "exact_sequence": true,
+              "expected_symbols": 122
+            }
+          },
+          "unique_event_identities": 81,
+          "unique_note_signatures": 7
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 122,
+          "event_count": 122,
+          "events_in_identity_collision_groups": 88,
+          "events_in_kind_collision_groups": 39,
+          "identity_collision_groups": 25,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 9,
+          "matches_current_sonify": true,
+          "note_count": 184,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.8770491803278688,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 81,
+          "unique_note_signatures": 47
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 15.435011337868481,
+        "energy_normalized_sample_sum": 6608.446109281853,
+        "frames": 340342,
+        "peak_normalized": 0.796234130859375,
+        "rms_normalized": 0.13934516464797647,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 613.7982945387366,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "infinite_recursion": {
+      "input_sha256": {
+        "code.mid": "710ad9a300543090ce13af25f38872e0572475b72020e186a22ffdd5001318f4",
+        "execution.wav": "71a29f8addea3254d2b49dd26fc7037b0d48b69c4294171fec657ae8390a03b4",
+        "notes.json": "3a7cd1805c9d8fbecef156e760867d1fc7e5577b82b29b976dd01572ffb19a16",
+        "trace.json": "9f4b5df8777499c07a7b89840ce8c5e8f1285fb44e2f881c9168ef557f0ca3ed"
+      },
+      "kind_counts": {
+        "call": 12,
+        "declare": 1,
+        "error": 1,
+        "read": 11,
+        "statement": 14
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 39,
+            "decoded_symbols": 39,
+            "exact_sequence": true,
+            "expected_symbols": 39
+          },
+          "event_count": 39,
+          "events_in_identity_collision_groups": 37,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 39,
+            "decoded_symbols": 39,
+            "exact_sequence": true,
+            "expected_symbols": 39
+          },
+          "identity_collision_groups": 3,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 39,
+            "decoded_symbols": 39,
+            "exact_sequence": true,
+            "expected_symbols": 39
+          },
+          "note_count": 39,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 39,
+              "decoded_symbols": 39,
+              "exact_sequence": true,
+              "expected_symbols": 39
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 39,
+              "decoded_symbols": 39,
+              "exact_sequence": true,
+              "expected_symbols": 39
+            }
+          },
+          "unique_event_identities": 39,
+          "unique_note_signatures": 5
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.0,
+            "correct_symbols": 0,
+            "decoded_symbols": 39,
+            "exact_sequence": false,
+            "expected_symbols": 39
+          },
+          "event_count": 39,
+          "events_in_identity_collision_groups": 37,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 39,
+            "decoded_symbols": 39,
+            "exact_sequence": true,
+            "expected_symbols": 39
+          },
+          "identity_collision_groups": 3,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 39,
+            "decoded_symbols": 39,
+            "exact_sequence": true,
+            "expected_symbols": 39
+          },
+          "note_count": 39,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 39,
+              "decoded_symbols": 39,
+              "exact_sequence": true,
+              "expected_symbols": 39
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 39,
+              "decoded_symbols": 39,
+              "exact_sequence": true,
+              "expected_symbols": 39
+            }
+          },
+          "unique_event_identities": 39,
+          "unique_note_signatures": 5
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 39,
+          "event_count": 39,
+          "events_in_identity_collision_groups": 4,
+          "events_in_kind_collision_groups": 4,
+          "identity_collision_groups": 2,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 2,
+          "matches_current_sonify": true,
+          "note_count": 53,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.9487179487179487,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 39,
+          "unique_note_signatures": 37
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 5.0600453514739225,
+        "energy_normalized_sample_sum": 1907.654620334506,
+        "frames": 111574,
+        "peak_normalized": 0.573974609375,
+        "rms_normalized": 0.13075803118783388,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 986.3546217656312,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "off_by_one": {
+      "input_sha256": {
+        "code.mid": "95815973e53d21d833000098c646a50385e6864dbd61817585a40a3f7ba899f5",
+        "execution.wav": "c539b8ca01cb2c15de2fdaff185df5a75d52c5019c6d5e99e999bca650447029",
+        "notes.json": "52474e763de3cb08290be6375c000db72b92977af32856ce1495b9b0c307508b",
+        "trace.json": "8fa0858b187755bc7fd8f00f3053d9abd13f1afc65f6e1a56afd846dd658cba3"
+      },
+      "kind_counts": {
+        "assign": 8,
+        "declare": 1,
+        "loop": 5,
+        "output": 1,
+        "read": 10,
+        "return": 1,
+        "statement": 8
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 34,
+            "decoded_symbols": 34,
+            "exact_sequence": true,
+            "expected_symbols": 34
+          },
+          "event_count": 34,
+          "events_in_identity_collision_groups": 31,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 34,
+            "decoded_symbols": 34,
+            "exact_sequence": true,
+            "expected_symbols": 34
+          },
+          "identity_collision_groups": 4,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 34,
+            "decoded_symbols": 34,
+            "exact_sequence": true,
+            "expected_symbols": 34
+          },
+          "note_count": 34,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 34,
+              "decoded_symbols": 34,
+              "exact_sequence": true,
+              "expected_symbols": 34
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 34,
+              "decoded_symbols": 34,
+              "exact_sequence": true,
+              "expected_symbols": 34
+            }
+          },
+          "unique_event_identities": 31,
+          "unique_note_signatures": 7
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.2647058823529412,
+            "correct_symbols": 9,
+            "decoded_symbols": 34,
+            "exact_sequence": false,
+            "expected_symbols": 34
+          },
+          "event_count": 34,
+          "events_in_identity_collision_groups": 31,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 34,
+            "decoded_symbols": 34,
+            "exact_sequence": true,
+            "expected_symbols": 34
+          },
+          "identity_collision_groups": 4,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 34,
+            "decoded_symbols": 34,
+            "exact_sequence": true,
+            "expected_symbols": 34
+          },
+          "note_count": 34,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 34,
+              "decoded_symbols": 34,
+              "exact_sequence": true,
+              "expected_symbols": 34
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 34,
+              "decoded_symbols": 34,
+              "exact_sequence": true,
+              "expected_symbols": 34
+            }
+          },
+          "unique_event_identities": 31,
+          "unique_note_signatures": 7
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 34,
+          "event_count": 34,
+          "events_in_identity_collision_groups": 28,
+          "events_in_kind_collision_groups": 28,
+          "identity_collision_groups": 8,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 8,
+          "matches_current_sonify": true,
+          "note_count": 36,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.5588235294117647,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 31,
+          "unique_note_signatures": 14
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 4.435011337868481,
+        "energy_normalized_sample_sum": 1053.0619285609573,
+        "frames": 97792,
+        "peak_normalized": 0.578765869140625,
+        "rms_normalized": 0.1037708303499667,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 289.17431536274626,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    },
+    "sum": {
+      "input_sha256": {
+        "code.mid": "419987f8f3d5987dbfb308cf5c97b9fdd220cb4b1bafd47c61b6e19d4e6c2d38",
+        "execution.wav": "a577b69f55106e3a67473dfb8680d0f007fd6c5fd72cadc2f553339ad2145b02",
+        "notes.json": "4fd382a4f92d1b61490be61c28afb359df53f30e8773b15164139399ec1dea0c",
+        "trace.json": "8a23d9e0cb2c0bcc9c2bf5c76ce03dd75d5caf1a0b92fe869db9cd664bdbfa03"
+      },
+      "kind_counts": {
+        "assign": 10,
+        "declare": 1,
+        "loop": 6,
+        "output": 1,
+        "read": 12,
+        "return": 1,
+        "statement": 9
+      },
+      "mappings": {
+        "A": {
+          "coarse_quantization_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 40,
+            "decoded_symbols": 40,
+            "exact_sequence": true,
+            "expected_symbols": 40
+          },
+          "event_count": 40,
+          "events_in_identity_collision_groups": 37,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 40,
+            "decoded_symbols": 40,
+            "exact_sequence": true,
+            "expected_symbols": 40
+          },
+          "identity_collision_groups": 4,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 40,
+            "decoded_symbols": 40,
+            "exact_sequence": true,
+            "expected_symbols": 40
+          },
+          "note_count": 40,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 40,
+              "decoded_symbols": 40,
+              "exact_sequence": true,
+              "expected_symbols": 40
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 40,
+              "decoded_symbols": 40,
+              "exact_sequence": true,
+              "expected_symbols": 40
+            }
+          },
+          "unique_event_identities": 36,
+          "unique_note_signatures": 7
+        },
+        "B": {
+          "coarse_quantization_recovery": {
+            "accuracy": 0.275,
+            "correct_symbols": 11,
+            "decoded_symbols": 40,
+            "exact_sequence": false,
+            "expected_symbols": 40
+          },
+          "event_count": 40,
+          "events_in_identity_collision_groups": 37,
+          "events_in_kind_collision_groups": 0,
+          "exact_note_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 40,
+            "decoded_symbols": 40,
+            "exact_sequence": true,
+            "expected_symbols": 40
+          },
+          "identity_collision_groups": 4,
+          "information_loss": "Kind retained; operands, locations, variables, and call stack omitted.",
+          "kind_collision_groups": 0,
+          "midi_roundtrip_recovery": {
+            "accuracy": 1.0,
+            "correct_symbols": 40,
+            "decoded_symbols": 40,
+            "exact_sequence": true,
+            "expected_symbols": 40
+          },
+          "note_count": 40,
+          "oracle_kind_majority_accuracy_on_this_corpus": 1.0,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_recovery": {
+            "180": {
+              "accuracy": 1.0,
+              "correct_symbols": 40,
+              "decoded_symbols": 40,
+              "exact_sequence": true,
+              "expected_symbols": 40
+            },
+            "60": {
+              "accuracy": 1.0,
+              "correct_symbols": 40,
+              "decoded_symbols": 40,
+              "exact_sequence": true,
+              "expected_symbols": 40
+            }
+          },
+          "unique_event_identities": 36,
+          "unique_note_signatures": 7
+        },
+        "C": {
+          "coarse_quantization_changed_signatures": 40,
+          "event_count": 40,
+          "events_in_identity_collision_groups": 32,
+          "events_in_kind_collision_groups": 32,
+          "identity_collision_groups": 8,
+          "information_loss": "Values reduce modulo 21; line motifs repeat by scale length; registers/channels repeat with depth; no general inverse.",
+          "kind_collision_groups": 8,
+          "matches_current_sonify": true,
+          "note_count": 42,
+          "oracle_kind_majority_accuracy_on_this_corpus": 0.625,
+          "signature_scope": "Per-event note content; IDs, absolute onset, and source location excluded; grouping uses trace IDs",
+          "tempo_invariance": "Mapping takes beats, not tempo; changing playback tempo leaves its note content unchanged.",
+          "unique_event_identities": 36,
+          "unique_note_signatures": 16
+        }
+      },
+      "signal": {
+        "channels": 1,
+        "duration_seconds": 5.185034013605442,
+        "energy_normalized_sample_sum": 1238.9875357877463,
+        "frames": 114330,
+        "peak_normalized": 0.526641845703125,
+        "rms_normalized": 0.10410063219435205,
+        "sample_rate": 22050,
+        "spectral_centroid_hz": 302.4214761753843,
+        "spectral_method": "2048-sample Hann, 1024 hop, global power weighting; mono downmix"
+      }
+    }
+  },
+  "kind": "automated_measurements",
+  "missing_demos": [],
+  "off_by_one": {
+    "event_count_difference": 6,
+    "first_event_content_divergence_zero_based": 27,
+    "first_musical_event_divergence_zero_based": 28,
+    "interpretation": "Structural difference measured; blind listener discrimination remains untested.",
+    "note_count_difference": 6
+  },
+  "participant_observations": 0,
+  "schema_version": 1,
+  "source_codec": {
+    "binary_search": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "binary_search_miss": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "bubble_sort": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "fibonacci": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "infinite_recursion": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "off_by_one": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    },
+    "sum": {
+      "canonical_ast_equal": true,
+      "scope": "SC1 symbolic source grammar, separate from runtime mappings"
+    }
+  }
+}

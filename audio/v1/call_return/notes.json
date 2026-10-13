@@ -1,0 +1,98 @@
+[
+  {
+    "channel": 1,
+    "duration": 0.44,
+    "event_id": 3,
+    "id": 0,
+    "line": 4,
+    "pitch": 83,
+    "start": 1.5,
+    "trace_index": 3,
+    "velocity": 86,
+    "voice": 1
+  },
+  {
+    "channel": 1,
+    "duration": 0.44,
+    "event_id": 3,
+    "id": 1,
+    "line": 4,
+    "pitch": 90,
+    "start": 1.5,
+    "trace_index": 3,
+    "velocity": 86,
+    "voice": 1
+  },
+  {
+    "channel": 1,
+    "duration": 0.44,
+    "event_id": 6,
+    "id": 2,
+    "line": 2,
+    "pitch": 83,
+    "start": 3.0,
+    "trace_index": 6,
+    "velocity": 78,
+    "voice": 1
+  },
+  {
+    "channel": 1,
+    "duration": 0.44,
+    "event_id": 6,
+    "id": 3,
+    "line": 2,
+    "pitch": 90,
+    "start": 3.0,
+    "trace_index": 6,
+    "velocity": 78,
+    "voice": 1
+  },
+  {
+    "channel": 1,
+    "duration": 0.44,
+    "event_id": 6,
+    "id": 4,
+    "line": 2,
+    "pitch": 95,
+    "start": 3.0,
+    "trace_index": 6,
+    "velocity": 78,
+    "voice": 1
+  },
+  {
+    "channel": 0,
+    "duration": 0.44,
+    "event_id": 7,
+    "id": 5,
+    "line": 4,
+    "pitch": 60,
+    "start": 3.5,
+    "trace_index": 7,
+    "velocity": 78,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.44,
+    "event_id": 7,
+    "id": 6,
+    "line": 4,
+    "pitch": 67,
+    "start": 3.5,
+    "trace_index": 7,
+    "velocity": 78,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.44,
+    "event_id": 7,
+    "id": 7,
+    "line": 4,
+    "pitch": 72,
+    "start": 3.5,
+    "trace_index": 7,
+    "velocity": 78,
+    "voice": 0
+  }
+]

@@ -1,0 +1,140 @@
+{
+  "error": {
+    "col": 1,
+    "kind": "AssertionError",
+    "line": 2,
+    "message": "Assertion failed"
+  },
+  "globals": {
+    "total": 10
+  },
+  "instructions": 7,
+  "output": [],
+  "return_value": null,
+  "trace": [
+    {
+      "col": 1,
+      "data": {
+        "statement": "let"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 1,
+      "data": {
+        "name": "total",
+        "value": 10
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "assert"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 2,
+      "kind": "statement",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    },
+    {
+      "col": 8,
+      "data": {
+        "name": "total",
+        "value": 10
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 3,
+      "kind": "read",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    },
+    {
+      "col": 17,
+      "data": {
+        "input": 0,
+        "value": 15
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 4,
+      "kind": "read",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "assertion": true,
+        "taken": false
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 5,
+      "kind": "branch",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "col": 1,
+        "kind": "AssertionError",
+        "line": 2,
+        "message": "Assertion failed"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 6,
+      "kind": "error",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {
+        "total": 10
+      }
+    }
+  ]
+}

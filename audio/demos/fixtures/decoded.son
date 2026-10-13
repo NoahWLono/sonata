@@ -1,0 +1,12 @@
+let values = input(0);
+let threshold = input(1);
+let total = 0;
+for i in 0..len(values) {
+    if (values[i] < threshold) {
+        continue;
+    }
+    total = total + values[i];
+}
+assert(total >= 0);
+print(total);
+return total;

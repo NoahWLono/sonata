@@ -1,0 +1,10 @@
+// Same statements as sum_compact.son, moved across lines.
+
+let total = 0;
+for i in 1..6 {
+    // Formatting changes where the assignment appears.
+    total = total + i;
+}
+
+print(total);
+return total;

@@ -1,0 +1,12 @@
+{
+  "bounded_demo": true,
+  "error": {
+    "kind": "DepthLimit",
+    "message": "Function call depth limit exceeded",
+    "line": 3,
+    "col": 12
+  },
+  "max_depth": 12,
+  "canonical_ast_roundtrip": true,
+  "independent_success_verification": "not applicable to intentional resource error"
+}

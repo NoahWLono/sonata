@@ -1,0 +1,956 @@
+{
+  "output": [],
+  "return_value": null,
+  "globals": {},
+  "trace": [
+    {
+      "id": 0,
+      "kind": "statement",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "fn"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "declare",
+      "line": 2,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "descend",
+        "function": true
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "statement",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "call",
+      "line": 5,
+      "col": 8,
+      "depth": 1,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          0
+        ]
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "descend"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 1,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "descend"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 1,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 0
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "descend"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 2,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          1
+        ]
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 2,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 2,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 3,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          2
+        ]
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 3,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 3,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 4,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          3
+        ]
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 4,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 4,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 15,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 5,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          4
+        ]
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 16,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 5,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 5,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 6,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          5
+        ]
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 6,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 6,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 21,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 7,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          6
+        ]
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 22,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 7,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 23,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 7,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 6
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 24,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 8,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          7
+        ]
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 25,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 8,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 26,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 8,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 7
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 27,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 9,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          8
+        ]
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 28,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 9,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 29,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 9,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 8
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 30,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 10,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          9
+        ]
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 31,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 10,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 32,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 10,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 9
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 33,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 11,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          10
+        ]
+      },
+      "variables": {
+        "n": 10
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 34,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 11,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 10
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 35,
+      "kind": "read",
+      "line": 3,
+      "col": 20,
+      "depth": 11,
+      "function": "descend",
+      "data": {
+        "name": "n",
+        "value": 10
+      },
+      "variables": {
+        "n": 10
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 36,
+      "kind": "call",
+      "line": 3,
+      "col": 12,
+      "depth": 12,
+      "function": "descend",
+      "data": {
+        "name": "descend",
+        "arguments": [
+          11
+        ]
+      },
+      "variables": {
+        "n": 11
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 37,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 12,
+      "function": "descend",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 11
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    },
+    {
+      "id": 38,
+      "kind": "error",
+      "line": 3,
+      "col": 12,
+      "depth": 12,
+      "function": "descend",
+      "data": {
+        "kind": "DepthLimit",
+        "message": "Function call depth limit exceeded",
+        "line": 3,
+        "col": 12
+      },
+      "variables": {
+        "n": 11
+      },
+      "stack": [
+        "<main>",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend",
+        "descend"
+      ]
+    }
+  ],
+  "error": {
+    "kind": "DepthLimit",
+    "message": "Function call depth limit exceeded",
+    "line": 3,
+    "col": 12
+  },
+  "instructions": 61
+}

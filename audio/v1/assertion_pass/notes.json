@@ -1,0 +1,26 @@
+[
+  {
+    "channel": 0,
+    "duration": 0.44,
+    "event_id": 5,
+    "id": 0,
+    "line": 2,
+    "pitch": 55,
+    "start": 2.5,
+    "trace_index": 5,
+    "velocity": 88,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.44,
+    "event_id": 5,
+    "id": 1,
+    "line": 2,
+    "pitch": 60,
+    "start": 2.5,
+    "trace_index": 5,
+    "velocity": 88,
+    "voice": 0
+  }
+]

@@ -1,0 +1,40 @@
+Recorded binary_search: 138 notes, 11.31s
+Recorded binary_search_miss: 156 notes, 12.69s
+Recorded bubble_sort: 478 notes, 30.95s
+Recorded factorial: 70 notes, 6.19s
+Recorded fibonacci: 184 notes, 15.44s
+Recorded infinite_recursion: 53 notes, 5.06s
+Recorded off_by_one: 36 notes, 4.44s
+Recorded sum: 42 notes, 5.19s
+{
+  "measured_demos": 7,
+  "missing_demos": []
+}
+{
+  "generated_participant_sequences": 6,
+  "scheduled_trials": 90,
+  "unique_stimuli": 30,
+  "participant_observations": 0,
+  "condition_orders": [
+    "ABC",
+    "BCA",
+    "CAB",
+    "ACB",
+    "CBA",
+    "BAC"
+  ],
+  "blind_pair_clips": 2,
+  "condition_variant_counts": {
+    "A:0": 10,
+    "A:1": 10,
+    "A:2": 10,
+    "B:0": 10,
+    "B:1": 10,
+    "B:2": 10,
+    "C:0": 10,
+    "C:1": 10,
+    "C:2": 10
+  },
+  "note": "Scheduled rows are assignments, not participant responses. Researcher-only keys must be physically separated before distribution."
+}
+Created audio/showcase/sonata-demo.mp4 (11.620s)

@@ -1,0 +1,87 @@
+{
+  "schema": "sonata-verification-1",
+  "passed": true,
+  "checks": {
+    "trace_ids_contiguous": true,
+    "trace_locations_valid": true,
+    "stack_depth_consistent": true,
+    "every_event_audible": true,
+    "note_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_success": true,
+    "reference_behavior_matches": true,
+    "canonical_ast_roundtrip": true,
+    "roundtrip_behavior": true,
+    "deterministic_code_midi": true,
+    "runtime_midi_notes_preserved": true,
+    "wav_duration": true,
+    "wav_non_silent": true
+  },
+  "expected": {
+    "output": [
+      [
+        0,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        4
+      ],
+      4
+    ],
+    "return_value": 4,
+    "globals": {
+      "found": 4
+    }
+  },
+  "actual": {
+    "output": [
+      [
+        0,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        4
+      ],
+      4
+    ],
+    "return_value": 4,
+    "globals": {
+      "found": 4
+    }
+  },
+  "runtime_error": null,
+  "trace_events": 89,
+  "runtime_notes": 138,
+  "code_notes": 497,
+  "audio": {
+    "duration": 11.310022675736962,
+    "rms": 0.12660718127524262,
+    "sample_rate": 22050
+  },
+  "sha256": {
+    "execution.wav": "a52e6fededce7add5fd2ba8fd71aa2431c79c0986c71f74cf1119ecba7d11c85",
+    "execution.mid": "decfd69d696b5aff3b3343d78ad5cade0105c98d37b5905d05ae1c77254015f6",
+    "code.mid": "38640e13519c4caba56a3ff04c281199eff33eff6ba2b885b1417737eb3ccf98"
+  },
+  "shared_dependencies": [
+    "Parser and canonical source printer",
+    "Mido for both MIDI writer and reader",
+    "NumPy numerical runtime",
+    "The codec supplies both encoding and decoding; generated and corruption tests supplement this check"
+  ],
+  "limits": [
+    "Reference comparison covers successful programs; resource-error equivalence is tested separately",
+    "Trace audit verifies source, stack and note correspondence, not every intermediate arithmetic transition",
+    "No human auditory recognition or usefulness is measured"
+  ]
+}

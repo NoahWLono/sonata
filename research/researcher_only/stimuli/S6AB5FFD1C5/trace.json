@@ -1,0 +1,614 @@
+{
+  "output": [],
+  "return_value": 3,
+  "globals": {},
+  "trace": [
+    {
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "fn"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "count",
+        "function": true
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "statement",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "call",
+      "line": 5,
+      "col": 8,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          3
+        ]
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          2
+        ]
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 15,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          1
+        ]
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 16,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 21,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          0
+        ]
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 22,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 23,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 0
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 24,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "taken": true
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 25,
+      "kind": "statement",
+      "line": 2,
+      "col": 19,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 26,
+      "kind": "return",
+      "line": 2,
+      "col": 19,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "value": 0
+      },
+      "variables": {
+        "n": 0
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 27,
+      "kind": "return",
+      "line": 3,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "value": 1
+      },
+      "variables": {
+        "n": 1
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 28,
+      "kind": "return",
+      "line": 3,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 29,
+      "kind": "return",
+      "line": 3,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 30,
+      "kind": "return",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "value": 3
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    }
+  ],
+  "error": null,
+  "instructions": 43
+}

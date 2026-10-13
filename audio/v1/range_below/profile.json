@@ -1,0 +1,18 @@
+{
+  "event_kinds": [
+    "declare"
+  ],
+  "event_stride": 1.0,
+  "functions": null,
+  "mapping": "semantic",
+  "ranges": {
+    "level": [
+      0,
+      10
+    ]
+  },
+  "variables": [
+    "level"
+  ],
+  "version": 1
+}

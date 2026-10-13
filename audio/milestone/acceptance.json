@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "runs": {
+    "sum": {
+      "result": 15,
+      "trace_events": 40,
+      "notes": 42,
+      "audio": {
+        "duration": 5.185034013605442,
+        "frames": 114330,
+        "sample_rate": 22050,
+        "rms": 0.10410377837161358
+      }
+    },
+    "off_by_one": {
+      "result": 10,
+      "trace_events": 34,
+      "notes": 36,
+      "audio": {
+        "duration": 4.435011337868481,
+        "frames": 97792,
+        "sample_rate": 22050,
+        "rms": 0.10377398276164909
+      }
+    }
+  }
+}

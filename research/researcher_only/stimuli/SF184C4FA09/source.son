@@ -1,0 +1,7 @@
+let reading = 6;
+if (reading >= 4) {
+    print(1);
+} else {
+    print(0);
+}
+return reading;

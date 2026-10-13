@@ -1,0 +1,146 @@
+{
+  "error": null,
+  "globals": {},
+  "instructions": 8,
+  "output": [],
+  "return_value": 6,
+  "trace": [
+    {
+      "col": 1,
+      "data": {
+        "statement": "fn"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 1,
+      "data": {
+        "function": true,
+        "name": "double"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 1,
+      "data": {
+        "statement": "return"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 2,
+      "kind": "statement",
+      "line": 4,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 8,
+      "data": {
+        "arguments": [
+          3
+        ],
+        "name": "double"
+      },
+      "depth": 1,
+      "function": "double",
+      "id": 3,
+      "kind": "call",
+      "line": 4,
+      "stack": [
+        "<main>",
+        "double"
+      ],
+      "variables": {
+        "n": 3
+      }
+    },
+    {
+      "col": 5,
+      "data": {
+        "statement": "return"
+      },
+      "depth": 1,
+      "function": "double",
+      "id": 4,
+      "kind": "statement",
+      "line": 2,
+      "stack": [
+        "<main>",
+        "double"
+      ],
+      "variables": {
+        "n": 3
+      }
+    },
+    {
+      "col": 12,
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "depth": 1,
+      "function": "double",
+      "id": 5,
+      "kind": "read",
+      "line": 2,
+      "stack": [
+        "<main>",
+        "double"
+      ],
+      "variables": {
+        "n": 3
+      }
+    },
+    {
+      "col": 5,
+      "data": {
+        "value": 6
+      },
+      "depth": 1,
+      "function": "double",
+      "id": 6,
+      "kind": "return",
+      "line": 2,
+      "stack": [
+        "<main>",
+        "double"
+      ],
+      "variables": {
+        "n": 3
+      }
+    },
+    {
+      "col": 1,
+      "data": {
+        "value": 6
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 7,
+      "kind": "return",
+      "line": 4,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    }
+  ]
+}

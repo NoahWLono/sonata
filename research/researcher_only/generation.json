@@ -1,0 +1,27 @@
+{
+  "generated_participant_sequences": 6,
+  "scheduled_trials": 90,
+  "unique_stimuli": 30,
+  "participant_observations": 0,
+  "condition_orders": [
+    "ABC",
+    "BCA",
+    "CAB",
+    "ACB",
+    "CBA",
+    "BAC"
+  ],
+  "blind_pair_clips": 2,
+  "condition_variant_counts": {
+    "A:0": 10,
+    "A:1": 10,
+    "A:2": 10,
+    "B:0": 10,
+    "B:1": 10,
+    "B:2": 10,
+    "C:0": 10,
+    "C:1": 10,
+    "C:2": 10
+  },
+  "note": "Scheduled rows are assignments, not participant responses. Researcher-only keys must be physically separated before distribution."
+}

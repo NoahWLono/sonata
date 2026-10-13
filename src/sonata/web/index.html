@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#191b22">
+  <title>SONATA · Musical debugger</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#source">Skip to source editor</a>
+  <header class="masthead">
+    <div class="identity"><span class="wordmark">Sonata<span class="wordmark-dot">.</span></span><span class="identity-rule"></span><p>A programming language<br>you can hear.</p></div>
+    <div class="session-label"><span class="connection-dot" aria-hidden="true"></span><span>Local musical debugger</span><details class="help"><summary aria-label="Keyboard shortcuts and help">?</summary><div><strong>At the conductor’s desk</strong><p>Run the source to build its execution trace. Listen, step through events, or click a note to inspect its source and state.</p><p>Click a line number to set a breakpoint. Click source text to find its events.</p><kbd>Ctrl</kbd> + <kbd>Enter</kbd> Run<br><kbd>Space</kbd> Play / pause<br><kbd>→</kbd> Step<br><kbd>Home</kbd> Rewind<p>Playback shortcuts apply outside form controls. Press Escape to pause. Tab leaves the editor; Ctrl+] inserts two spaces. Comparison switches keep the same beat.</p></div></details></div>
+  </header>
+
+  <main>
+    <section class="transport" aria-label="Execution and playback controls">
+      <div class="transport-actions">
+        <button id="run" class="primary"><span aria-hidden="true">▶</span> Run source</button>
+        <span class="control-divider"></span>
+        <button id="play" disabled><span id="play-icon" aria-hidden="true">▷</span> <span id="play-label">Play</span></button>
+        <button id="step" disabled title="Advance one event and hear its notes">Step <span aria-hidden="true">›</span></button>
+        <button id="replay" class="icon-button" disabled aria-label="Rewind to the beginning" title="Rewind">↶</button>
+        <div class="clock"><span id="current-time">0:00.00</span><span class="clock-separator">/</span><span id="total-time">0:00.00</span></div>
+      </div>
+      <div class="transport-settings">
+        <label>Speed<select id="speed"><option value="0.5">½×</option><option value="1" selected>1×</option><option value="1.5">1½×</option><option value="2">2×</option></select></label>
+        <label>Palette<select id="palette"><option value="classical">Classical</option><option value="electronic">Electronic</option><option value="ambient">Ambient</option></select></label>
+      </div>
+    </section>
+
+    <div class="notice" id="notice" role="status" aria-live="polite"><span class="notice-indicator" aria-hidden="true"></span><span id="status">Loading the first score…</span><span id="run-stats"></span></div>
+    <div id="error-banner" class="error-banner" role="alert" hidden></div>
+
+    <details class="studio-options" id="listening-options">
+      <summary>Inputs and listening settings <span>Choose what to hear</span></summary>
+      <div class="options-grid">
+        <label class="fixture-field">Input fixture A<textarea id="fixtures" rows="3" spellcheck="false" aria-describedby="fixture-help">[]</textarea><small id="fixture-help">JSON array, read with input(index). Integers retain full 64-bit precision.</small></label>
+        <div class="listening-fields">
+          <label>Mapping<select id="mapping"><option value="semantic">Stable semantic motifs</option><option value="legacy">Original line motifs</option></select></label>
+          <label>Event kinds<input id="filter-kinds" placeholder="assign, call, return" aria-describedby="filter-help"></label>
+          <label>Functions<input id="filter-functions" placeholder="fib, main" aria-describedby="filter-help"></label>
+          <label>Variables<input id="filter-variables" placeholder="total, values" aria-describedby="filter-help"></label>
+          <p id="filter-help" class="field-help">Comma-separated names; blank means all. Filters intersect. Muted events remain in the trace at their original times.</p>
+          <fieldset class="range-fields"><legend>Numerical listening range</legend><label>Variable<input id="range-name" placeholder="total (or *)"></label><label>Minimum<input id="range-min" type="number" step="1" value="0"></label><label>Maximum<input id="range-max" type="number" step="1" value="20"></label><small>Values outside this range add a warning tone. Leave the variable blank to use the default mapping.</small></fieldset>
+          <button id="apply-settings">Run with these settings</button>
+        </div>
+      </div>
+    </details>
+
+    <details class="comparison-panel" id="comparison-panel">
+      <summary>Compare two executions <span id="comparison-summary">A and B share a playback cursor</span></summary>
+      <div class="comparison-inputs">
+        <div><label for="source-b">Program B</label><textarea id="source-b" spellcheck="false" rows="8" maxlength="20000" placeholder="Paste a variant of program A, or copy A below."></textarea><button id="copy-to-b">Copy A to B</button></div>
+        <div><label for="fixtures-b">Input fixture B</label><textarea id="fixtures-b" rows="3" spellcheck="false">[]</textarea><p class="field-help">Use different code, different inputs, or both. The source editor holds A. Compare runs both programs with the same listening settings.</p><button id="compare" class="primary">Compare A and B</button></div>
+      </div>
+      <div id="comparison-results" hidden>
+        <div class="comparison-toolbar"><div class="segmented" aria-label="Audition comparison"><button id="audition-a" aria-pressed="true">Listen to A</button><button id="audition-b" aria-pressed="false">Listen to B</button></div><button id="jump-divergence">Go to first divergence</button><span id="comparison-detail" role="status"></span></div>
+        <div class="paired-sources"><div><h3>Source A</h3><pre id="comparison-source-a"></pre></div><div><h3>Source B</h3><pre id="comparison-source-b"></pre></div></div>
+      </div>
+    </details>
+
+    <div class="workbench">
+      <section class="source-panel panel" aria-labelledby="source-title">
+        <div class="panel-heading"><div><h1 id="source-title">Source</h1><span class="panel-caption" id="source-state">Editable program</span></div><label class="example-picker"><span class="sr-only">Load example</span><select id="examples"><option value="">Choose an example</option></select></label></div>
+        <div class="source-filename"><span id="filename">program.son</span><span id="cursor-line">Line 1</span></div>
+        <div class="editor-wrap"><div id="line-numbers" class="line-numbers" aria-label="Line breakpoints"></div><textarea id="source" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="SONATA source code" maxlength="20000"></textarea></div>
+        <div class="source-foot"><span id="source-link">Run to link source to sound.</span><div><button id="previous-line-event" class="tiny-button" disabled title="Previous event on this source line" aria-label="Previous event on this source line">‹</button><button id="next-line-event" class="tiny-button" disabled title="Next event on this source line" aria-label="Next event on this source line">›</button></div></div>
+        <div class="breakpoint-bar"><span class="breakpoint-symbol" aria-hidden="true">●</span><span id="breakpoint-summary">Click a line number to pause there.</span><button id="clear-breakpoints" class="text-button" disabled>Clear</button></div>
+      </section>
+
+      <section class="score-panel panel" aria-labelledby="score-title">
+        <div class="panel-heading"><div><h2 id="score-title">The score</h2><span class="panel-caption" id="score-caption">The sound of this execution</span></div><span id="note-count" class="note-count">0 notes</span></div>
+        <div class="score-controls"><div class="segmented" aria-label="Score view"><button id="runtime-view" aria-pressed="true">Execution</button><button id="code-view" aria-pressed="false">Executable score</button></div><label class="zoom-control">Zoom<input id="zoom" type="range" min="45" max="220" value="100" aria-label="Timeline zoom"></label></div>
+        <div class="loop-controls" aria-label="Playback region"><label><input id="loop-enabled" type="checkbox"> Loop region</label><label>From beat<input id="loop-start" type="number" min="0" step="0.25" value="0"></label><button id="mark-loop-start" title="Use current beat as region start">Set start</button><label>To beat<input id="loop-end" type="number" min="0.25" step="0.25" value="1"></label><button id="mark-loop-end" title="Use current beat as region end">Set end</button></div>
+        <div class="timeline-shell"><div id="timeline-scroll" class="timeline-scroll"><div id="timeline-content" class="timeline-content"><canvas id="timeline" tabindex="0" role="img" aria-label="Piano roll. Click a note to inspect its source; use left and right arrow keys to step."></canvas></div></div><div class="timeline-empty" id="timeline-empty"><span class="empty-staff" aria-hidden="true">♩</span><p>Your execution will appear here.</p><span>Run the source, then press Play.</span></div></div>
+        <div class="timeline-key"><div id="voice-legend"><span><i class="voice-swatch"></i> Main voice</span></div><span>120 BPM <span aria-hidden="true">/</span> time in beats</span></div>
+        <div id="score-editor" class="score-editor" hidden>
+          <div class="score-editor-heading"><h3>Edit the executable score</h3><span id="token-position">Select a musical cell</span></div>
+          <p class="field-help">Each token is encoded by these actual pitches. Edit cells, then validate the program and regenerate its framing and checksum.</p>
+          <div id="token-cells" class="token-cells" aria-label="Executable musical token cells"></div>
+          <div class="token-pages"><button id="token-page-back">Previous cells</button><span id="token-page-label"></span><button id="token-page-next">Next cells</button></div>
+          <div class="token-edit"><label>Token text<input id="token-text" spellcheck="false" placeholder="Select a cell"></label><button id="token-replace">Replace</button><button id="token-insert-before">Insert before</button><button id="token-insert-after">Insert after</button><button id="token-delete">Delete</button></div>
+          <div class="score-editor-actions"><span id="score-draft-status" role="status">Validated score</span><button id="score-reset">Discard edits</button><button id="score-apply">Validate and run score</button></div>
+        </div>
+        <div class="event-ribbon"><span id="event-position" aria-live="off">No event selected</span><span id="event-kind" class="event-kind">Ready</span></div>
+        <div class="event-navigation"><label>Inspect event<input id="event-seek" type="range" min="0" max="0" value="0" disabled aria-label="Execution event"></label><output id="event-accessible">Run a program to inspect events.</output></div>
+        <div class="output-panel"><div class="output-heading"><h3>Program output</h3><span>Return <code id="return-value">—</code></span></div><pre id="program-output">Run the source to see its output.</pre></div>
+        <div class="export-bar"><span>Save this performance</span><div><button id="export-wav" disabled>WAV</button><button id="export-midi" disabled>Runtime MIDI</button><button id="export-code" disabled>Executable MIDI</button></div></div>
+      </section>
+
+      <aside class="state-panel panel" aria-labelledby="state-title">
+        <div class="panel-heading"><div><h2 id="state-title">At this moment</h2><span class="panel-caption">State after the selected event</span></div><span class="live-marker" id="state-marker" aria-hidden="true"></span></div>
+        <div class="state-section event-detail"><div class="state-section-heading"><h3>Event</h3><span id="event-id">—</span></div><p id="event-description">Select a note or step through the program.</p><pre id="event-data">{}</pre></div>
+        <div class="state-section"><div class="state-section-heading"><h3>Variables</h3><span id="variable-count">0</span></div><pre id="variables">{}</pre></div>
+        <div class="state-section"><div class="state-section-heading"><h3>Call stack</h3><span id="stack-depth">0</span></div><ol id="stack" class="stack"><li class="muted">No active frame</li></ol></div>
+        <div class="selected-note"><h3>Selected sound</h3><div id="selected-note">Click a note to see its pitch and timing.</div></div>
+      </aside>
+    </div>
+    <footer class="workspace-footer"><span>Deterministic execution. Original synthesis. All local.</span><span id="view-explanation">Each sound links to a step in your program.</span></footer>
+  </main>
+</body>
+</html>

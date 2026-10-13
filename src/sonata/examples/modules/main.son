@@ -1,0 +1,5 @@
+import statistics;
+let result = sum_squares(range(1, 6));
+assert(result == 55);
+print(result);
+return result;

@@ -1,0 +1,13 @@
+let values = [5, 1, 4, 2, 3];
+print(values);
+for pass in 0..len(values) {
+    for j in 0..len(values) - 1 - pass {
+        if (values[j] > values[j + 1]) {
+            let temporary = values[j];
+            values[j] = values[j + 1];
+            values[j + 1] = temporary;
+        }
+    }
+    print(values);
+}
+return values;

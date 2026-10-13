@@ -1,0 +1,15 @@
+// Stop on a sentinel; ignore negative measurements.
+let samples = [2, -1, 5, 3, 99, 7];
+let total = 0;
+for i in 0..len(samples) {
+    if (samples[i] == 99) {
+        break;
+    }
+    if (samples[i] < 0) {
+        continue;
+    }
+    total = total + samples[i];
+}
+assert(total == 10);
+print(total);
+return total;

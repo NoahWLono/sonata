@@ -1,0 +1,79 @@
+{
+  "schema": "sonata-verification-1",
+  "passed": true,
+  "checks": {
+    "trace_ids_contiguous": true,
+    "trace_locations_valid": true,
+    "stack_depth_consistent": true,
+    "every_event_audible": true,
+    "note_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_success": true,
+    "reference_behavior_matches": true,
+    "canonical_ast_roundtrip": true,
+    "roundtrip_behavior": true,
+    "deterministic_code_midi": true,
+    "runtime_midi_notes_preserved": true,
+    "wav_duration": true,
+    "wav_non_silent": true
+  },
+  "expected": {
+    "output": [
+      10
+    ],
+    "return_value": 10,
+    "globals": {
+      "samples": [
+        2,
+        -1,
+        5,
+        3,
+        99,
+        7
+      ],
+      "total": 10
+    }
+  },
+  "actual": {
+    "output": [
+      10
+    ],
+    "return_value": 10,
+    "globals": {
+      "samples": [
+        2,
+        -1,
+        5,
+        3,
+        99,
+        7
+      ],
+      "total": 10
+    }
+  },
+  "runtime_error": null,
+  "trace_events": 92,
+  "runtime_notes": 176,
+  "code_notes": 332,
+  "audio": {
+    "duration": 11.685034013605442,
+    "rms": 0.12328026124550533,
+    "sample_rate": 22050
+  },
+  "sha256": {
+    "execution.wav": "8df052723f3c77a87a310e6cdd41501d45de2c1d328d4fcb5d7dfc41979a17fb",
+    "execution.mid": "fe55f90d32c7f46ef2f6a25cc5a772586614666632978d3fcefff3b75c6f23c8",
+    "code.mid": "3a9451cc01107e862917de0dccd73a9942ed4966523ffb9d4a934bd767d42ed4"
+  },
+  "shared_dependencies": [
+    "Parser and canonical source printer",
+    "Mido for both MIDI writer and reader",
+    "NumPy numerical runtime",
+    "The codec supplies both encoding and decoding; generated and corruption tests supplement this check"
+  ],
+  "limits": [
+    "Reference comparison covers successful programs; resource-error equivalence is tested separately",
+    "Trace audit verifies source, stack and note correspondence, not every intermediate arithmetic transition",
+    "No human auditory recognition or usefulness is measured"
+  ]
+}

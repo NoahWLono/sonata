@@ -1,0 +1,14 @@
+include LICENSE README.md SPEC.md requirements-lock.txt requirements-build.txt
+include CONTRIBUTING.md SECURITY.md
+include CHANGELOG.md
+recursive-include debugger *.md
+recursive-include src/sonata/web *.html *.js *.css
+recursive-include src/sonata/examples *.son *.json *.py *.md
+recursive-include examples *.son *.json *.py *.md
+recursive-include tests *.py *.cjs
+recursive-include scripts *.py *.sh
+recursive-include docs *.md
+recursive-include research *.py *.md
+recursive-include experiments *.py *.md
+prune docs/verification
+global-exclude __pycache__ *.py[cod]

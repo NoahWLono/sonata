@@ -1,0 +1,85 @@
+{
+  "error": null,
+  "globals": {},
+  "instructions": 5,
+  "output": [],
+  "return_value": 1,
+  "trace": [
+    {
+      "col": 1,
+      "data": {
+        "statement": "if"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 5,
+      "data": {
+        "input": 0,
+        "value": true
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 1,
+      "kind": "read",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 1,
+      "data": {
+        "taken": true
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 2,
+      "kind": "branch",
+      "line": 1,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 5,
+      "data": {
+        "statement": "return"
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 3,
+      "kind": "statement",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    },
+    {
+      "col": 5,
+      "data": {
+        "value": 1
+      },
+      "depth": 0,
+      "function": "<main>",
+      "id": 4,
+      "kind": "return",
+      "line": 2,
+      "stack": [
+        "<main>"
+      ],
+      "variables": {}
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "schema": "sonata-verification-1",
+  "passed": true,
+  "checks": {
+    "trace_ids_contiguous": true,
+    "trace_locations_valid": true,
+    "stack_depth_consistent": true,
+    "every_event_audible": true,
+    "note_locations_match": true,
+    "note_time_cells_match": true,
+    "reference_success": true,
+    "reference_behavior_matches": true,
+    "canonical_ast_roundtrip": true,
+    "roundtrip_behavior": true,
+    "deterministic_code_midi": true,
+    "runtime_midi_notes_preserved": true,
+    "wav_duration": true,
+    "wav_non_silent": true
+  },
+  "expected": {
+    "output": [
+      [
+        5,
+        1,
+        4,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "return_value": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "globals": {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "actual": {
+    "output": [
+      [
+        5,
+        1,
+        4,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "return_value": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "globals": {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "runtime_error": null,
+  "trace_events": 246,
+  "runtime_notes": 478,
+  "code_notes": 380,
+  "audio": {
+    "duration": 30.94702947845805,
+    "rms": 0.12048057230212639,
+    "sample_rate": 22050
+  },
+  "sha256": {
+    "execution.wav": "b40d822974289f894d7b4ed96dba21e8824d9290d8334cb4cc6ed024dc792d64",
+    "execution.mid": "4f376d9eeaf4f7db1a6a0c788975a257b5bd84820a79c5350c6060ab7d909c99",
+    "code.mid": "372086c4b3b3a59e08c525bd9572bd9ae8c55fb64be67d58f9060e9e109c3963"
+  },
+  "shared_dependencies": [
+    "Parser and canonical source printer",
+    "Mido for both MIDI writer and reader",
+    "NumPy numerical runtime",
+    "The codec supplies both encoding and decoding; generated and corruption tests supplement this check"
+  ],
+  "limits": [
+    "Reference comparison covers successful programs; resource-error equivalence is tested separately",
+    "Trace audit verifies source, stack and note correspondence, not every intermediate arithmetic transition",
+    "No human auditory recognition or usefulness is measured"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "sent_messages": 2566,
+  "stopped": false,
+  "scheduled_seconds": 84.380868,
+  "fixture": "smb_over.mid",
+  "sha256": "ac059157543099d4a04ee1655001a5596358d7dbbdef88c86ec12bc6325dc0bb",
+  "notes_imported": 1279,
+  "tracks": 5,
+  "note_on_messages": 1279,
+  "reset": true,
+  "panic": true,
+  "verification": "Real MIDI parsed and tempo-scheduled to an in-memory port with a virtual clock. No physical MIDI device or DAW was tested.",
+  "distribution": "User-provided third-party sequence not bundled; source track credit: Sequenced by P.J. Barnes."
+}

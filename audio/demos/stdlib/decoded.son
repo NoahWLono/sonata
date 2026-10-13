@@ -1,0 +1,7 @@
+let values = range(-2, 4);
+let baseline = repeat(3, len(values));
+let total = sum(values) + sum(baseline);
+assert(total == 21);
+print(clamp(total, 0, 10));
+print(abs(min(-9, max(1, 5))));
+return total;

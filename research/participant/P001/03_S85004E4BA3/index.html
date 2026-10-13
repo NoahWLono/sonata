@@ -1,0 +1,237 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>SONATA study task</title><style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:20px;background:#fbfaf5;color:#19242a}pre{background:#eeece2;padding:18px;overflow:auto}pre span{display:block}.selected{background:#ffe092}.timeline{max-height:420px;overflow:auto}button{display:block;margin:4px;padding:8px;width:95%;text-align:left}</style><h1>Task S85004E4BA3</h1><p>The function should recurse toward zero and return 2.</p><pre><span id="line-1"> 1  fn count(n) {</span>
+<span id="line-2"> 2      if (n == 0) { return 0; }</span>
+<span id="line-3"> 3      return 1 + count(n - 1);</span>
+<span id="line-4"> 4  }</span>
+<span id="line-5"> 5  return count(2);</span></pre><h2>Execution log</h2><pre>[
+  {
+    &quot;id&quot;: 0,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 1,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;fn&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 1,
+    &quot;kind&quot;: &quot;declare&quot;,
+    &quot;line&quot;: 1,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;function&quot;: true
+    }
+  },
+  {
+    &quot;id&quot;: 2,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 5,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 3,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 5,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        2
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 4,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 5,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 2
+    }
+  },
+  {
+    &quot;id&quot;: 6,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 7,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 8,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 2
+    }
+  },
+  {
+    &quot;id&quot;: 9,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        1
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 10,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 11,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 1
+    }
+  },
+  {
+    &quot;id&quot;: 12,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;taken&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: 13,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 14,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 1
+    }
+  },
+  {
+    &quot;id&quot;: 15,
+    &quot;kind&quot;: &quot;call&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;count&quot;,
+      &quot;arguments&quot;: [
+        0
+      ]
+    }
+  },
+  {
+    &quot;id&quot;: 16,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;if&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 17,
+    &quot;kind&quot;: &quot;read&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;name&quot;: &quot;n&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  {
+    &quot;id&quot;: 18,
+    &quot;kind&quot;: &quot;branch&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;taken&quot;: true
+    }
+  },
+  {
+    &quot;id&quot;: 19,
+    &quot;kind&quot;: &quot;statement&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;statement&quot;: &quot;return&quot;
+    }
+  },
+  {
+    &quot;id&quot;: 20,
+    &quot;kind&quot;: &quot;return&quot;,
+    &quot;line&quot;: 2,
+    &quot;depth&quot;: 3,
+    &quot;data&quot;: {
+      &quot;value&quot;: 0
+    }
+  },
+  {
+    &quot;id&quot;: 21,
+    &quot;kind&quot;: &quot;return&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 2,
+    &quot;data&quot;: {
+      &quot;value&quot;: 1
+    }
+  },
+  {
+    &quot;id&quot;: 22,
+    &quot;kind&quot;: &quot;return&quot;,
+    &quot;line&quot;: 3,
+    &quot;depth&quot;: 1,
+    &quot;data&quot;: {
+      &quot;value&quot;: 2
+    }
+  },
+  {
+    &quot;id&quot;: 23,
+    &quot;kind&quot;: &quot;return&quot;,
+    &quot;line&quot;: 5,
+    &quot;depth&quot;: 0,
+    &quot;data&quot;: {
+      &quot;value&quot;: 2
+    }
+  }
+]</pre></html>

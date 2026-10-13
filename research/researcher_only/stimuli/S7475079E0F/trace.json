@@ -1,0 +1,1134 @@
+{
+  "output": [],
+  "return_value": null,
+  "globals": {},
+  "trace": [
+    {
+      "id": 0,
+      "kind": "statement",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "fn"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "declare",
+      "line": 1,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "name": "count",
+        "function": true
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "statement",
+      "line": 5,
+      "col": 1,
+      "depth": 0,
+      "function": "<main>",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {},
+      "stack": [
+        "<main>"
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "call",
+      "line": 5,
+      "col": 8,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          2
+        ]
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 4,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 5,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 6,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 7,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 1,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 2
+      },
+      "variables": {
+        "n": 2
+      },
+      "stack": [
+        "<main>",
+        "count"
+      ]
+    },
+    {
+      "id": 9,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          3
+        ]
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 10,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 12,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 13,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 14,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 2,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 3
+      },
+      "variables": {
+        "n": 3
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 15,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          4
+        ]
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 16,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 17,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 18,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 19,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 20,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 3,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 4
+      },
+      "variables": {
+        "n": 4
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 21,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          5
+        ]
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 22,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 23,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 24,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 25,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 26,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 4,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 5
+      },
+      "variables": {
+        "n": 5
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 27,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          6
+        ]
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 28,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 29,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 6
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 30,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 31,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 32,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 5,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 6
+      },
+      "variables": {
+        "n": 6
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 33,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          7
+        ]
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 34,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 35,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 7
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 36,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 37,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 38,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 6,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 7
+      },
+      "variables": {
+        "n": 7
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 39,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          8
+        ]
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 40,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 41,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 8
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 42,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 43,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 44,
+      "kind": "read",
+      "line": 3,
+      "col": 22,
+      "depth": 7,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 8
+      },
+      "variables": {
+        "n": 8
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 45,
+      "kind": "call",
+      "line": 3,
+      "col": 16,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "name": "count",
+        "arguments": [
+          9
+        ]
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 46,
+      "kind": "statement",
+      "line": 2,
+      "col": 5,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "statement": "if"
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 47,
+      "kind": "read",
+      "line": 2,
+      "col": 9,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "name": "n",
+        "value": 9
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 48,
+      "kind": "branch",
+      "line": 2,
+      "col": 5,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "taken": false
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 49,
+      "kind": "statement",
+      "line": 3,
+      "col": 5,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "statement": "return"
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    },
+    {
+      "id": 50,
+      "kind": "error",
+      "line": 3,
+      "col": 16,
+      "depth": 8,
+      "function": "count",
+      "data": {
+        "kind": "DepthLimit",
+        "message": "Function call depth limit exceeded",
+        "line": 3,
+        "col": 16
+      },
+      "variables": {
+        "n": 9
+      },
+      "stack": [
+        "<main>",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count",
+        "count"
+      ]
+    }
+  ],
+  "error": {
+    "kind": "DepthLimit",
+    "message": "Function call depth limit exceeded",
+    "line": 3,
+    "col": 16
+  },
+  "instructions": 89
+}

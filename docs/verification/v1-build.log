@@ -1,0 +1,110 @@
+Requirement already satisfied: hypothesis==6.169.0 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 1)) (6.169.0)
+Requirement already satisfied: iniconfig==2.3.1 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 2)) (2.3.1)
+Requirement already satisfied: mido==1.3.3 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 3)) (1.3.3)
+Requirement already satisfied: numpy==2.5.4 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 4)) (2.5.4)
+Requirement already satisfied: packaging==26.3 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 5)) (26.3)
+Requirement already satisfied: pluggy==1.6.0 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 6)) (1.6.0)
+Requirement already satisfied: Pygments==2.21.0 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 7)) (2.21.0)
+Requirement already satisfied: pytest==9.1.1 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 8)) (9.1.1)
+Requirement already satisfied: sortedcontainers==2.4.0 in ./.venv/lib/python3.14/site-packages (from -r requirements-lock.txt (line 9)) (2.4.0)
+Obtaining file://<checkout>
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sonata-lang
+  Building editable for sonata-lang (pyproject.toml): started
+  Building editable for sonata-lang (pyproject.toml): finished with status 'done'
+  Created wheel for sonata-lang: filename=sonata_lang-1.0.0-0.editable-py3-none-any.whl size=6235 sha256=ad04eed6bded4ab712f428768422926c572efafa563025809cc16954f5901760
+  Stored in directory: /tmp/pip-ephem-wheel-cache-mq8q_7g6/wheels/e6/e1/8c/a9e8f01309a960327bd88008956806984ef2670a6a5b6bad0d
+Successfully built sonata-lang
+Installing collected packages: sonata-lang
+  Attempting uninstall: sonata-lang
+    Found existing installation: sonata-lang 0.1.0
+    Uninstalling sonata-lang-0.1.0:
+      Successfully uninstalled sonata-lang-0.1.0
+Successfully installed sonata-lang-1.0.0
+Verified 36 packaged example resources
+.                                                                        [100%]
+1 passed in 0.46s
+{
+  "sum": {
+    "result": 15,
+    "trace_events": 40,
+    "notes": 42,
+    "audio": {
+      "duration": 5.185034013605442,
+      "frames": 114330,
+      "sample_rate": 22050,
+      "rms": 0.10410377837161358
+    }
+  },
+  "off_by_one": {
+    "result": 10,
+    "trace_events": 34,
+    "notes": 36,
+    "audio": {
+      "duration": 4.435011337868481,
+      "frames": 97792,
+      "sample_rate": 22050,
+      "rms": 0.10377398276164909
+    }
+  }
+}
+........................................................................ [ 15%]
+........................................................................ [ 30%]
+........................................................................ [ 45%]
+........................................................................ [ 60%]
+........................................................................ [ 75%]
+........................................................................ [ 90%]
+.............................................                            [100%]
+477 passed in 20.58s
+Recorded binary_search: 138 notes, 11.31s
+Recorded binary_search_miss: 156 notes, 12.69s
+Recorded bubble_sort: 478 notes, 30.95s
+Recorded control: 176 notes, 11.69s
+Recorded factorial: 70 notes, 6.19s
+Recorded fibonacci: 184 notes, 15.44s
+Recorded fixtures: 110 notes, 9.19s
+Recorded infinite_recursion: 53 notes, 5.06s
+Recorded off_by_one: 36 notes, 4.44s
+Recorded stdlib: 48 notes, 2.69s
+Recorded sum: 42 notes, 5.19s
+Generated 19 verified listening clips in <checkout>/audio/v1
+{
+  "measured_demos": 7,
+  "missing_demos": []
+}
+{
+  "generated_participant_sequences": 6,
+  "scheduled_trials": 90,
+  "unique_stimuli": 30,
+  "participant_observations": 0,
+  "condition_orders": [
+    "ABC",
+    "BCA",
+    "CAB",
+    "ACB",
+    "CBA",
+    "BAC"
+  ],
+  "blind_pair_clips": 2,
+  "condition_variant_counts": {
+    "A:0": 10,
+    "A:1": 10,
+    "A:2": 10,
+    "B:0": 10,
+    "B:1": 10,
+    "B:2": 10,
+    "C:0": 10,
+    "C:1": 10,
+    "C:2": 10
+  },
+  "note": "Scheduled rows are assignments, not participant responses. Researcher-only keys must be physically separated before distribution."
+}
+Created audio/showcase/sonata-demo.mp4 (11.620s)
+Verified 11 real program artifact bundles; inventoried 596 files.

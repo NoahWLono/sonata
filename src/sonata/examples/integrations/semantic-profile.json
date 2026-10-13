@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "mapping": "semantic",
+  "event_stride": 0.25,
+  "event_kinds": ["declare", "assign", "return", "error"],
+  "functions": null,
+  "variables": null,
+  "ranges": {"total": [0, 15]}
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 4,
+    "id": 0,
+    "line": 2,
+    "pitch": 67,
+    "start": 4.0,
+    "trace_index": 4,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 4,
+    "id": 1,
+    "line": 2,
+    "pitch": 53,
+    "start": 4.333333333333333,
+    "trace_index": 4,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 4,
+    "id": 2,
+    "line": 2,
+    "pitch": 64,
+    "start": 4.666666666666667,
+    "trace_index": 4,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 11,
+    "id": 3,
+    "line": 5,
+    "pitch": 53,
+    "start": 11.0,
+    "trace_index": 11,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 11,
+    "id": 4,
+    "line": 5,
+    "pitch": 67,
+    "start": 11.333333333333334,
+    "trace_index": 11,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 11,
+    "id": 5,
+    "line": 5,
+    "pitch": 64,
+    "start": 11.666666666666666,
+    "trace_index": 11,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 18,
+    "id": 6,
+    "line": 8,
+    "pitch": 53,
+    "start": 18.0,
+    "trace_index": 18,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 18,
+    "id": 7,
+    "line": 8,
+    "pitch": 64,
+    "start": 18.333333333333332,
+    "trace_index": 18,
+    "velocity": 90,
+    "voice": 0
+  },
+  {
+    "channel": 0,
+    "duration": 0.29333333333333333,
+    "event_id": 18,
+    "id": 8,
+    "line": 8,
+    "pitch": 67,
+    "start": 18.666666666666668,
+    "trace_index": 18,
+    "velocity": 90,
+    "voice": 0
+  }
+]
